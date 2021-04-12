@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+.h-90{
+    height: 90%;
+}
+.main-logo {
+    margin-bottom: 10%;
+    max-width: 250px;
+    max-height: 300px;
+}
+.btn-main {
+    font-size: 24px;
+    font-weight: 400;
+    width: 90%;
+    min-height: 50px;
+    background-color: #414141;
+    color:white;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+
+}
+.inpt-main{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #E9E9E9;
+    width: 90%;
+    min-height: 50px;
+    border: 0px solid #d3d3d3;
+}
+
+input{
+    font-size: 24;
+    text-align: center;
+    text-transform: uppercase;
+}

@@ -1,0 +1,56 @@
+<div class="container main-cnt h-90">
+    <ng-container *ngIf="showQuestions else noQuestions">
+        well it works
+    </ng-container>
+    <ng-template #noQuestions>
+        <div class="row text-center">
+            <div class="col">
+                <img class="main-logo" src="../../assets/logoCursos.png" />
+            </div>
+        </div>
+        <ng-container *ngIf="claveEncontrada else idNotFound">
+            <div class="row text-center">
+                <div class="col">
+                    <div class="col mb-2">
+                        <form class="form-field-cnt">
+                            <input placeholder="Nombre" class="mt-2 mb-1 inpt-main" name="name" type="text"
+                                [(ngModel)]="userNameInpt">
+                            <input placeholder="Apellido" class="mb-1 inpt-main" name="name" type="text"
+                                [(ngModel)]="userSurNameInpt">
+                            <input placeholder="Email" class="inpt-main" name="email" type="email"
+                                [(ngModel)]="userEmailInpt">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <button class="mt-2 btn-main" mat-raised-button
+                        (click)="writeUserData(userNameInpt, userSurNameInpt,userEmailInpt)">
+                        Ingresar
+                    </button>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-template #idNotFound>
+            <div class="row text-center">
+                <div class="col">
+                    <p>
+                        No conseguimos la clave que suministrate, por favor vuelve a intentar
+                    </p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <button class="mt-4 btn-main" mat-raised-button (click)="goToSurveys()">
+                        Regresar
+                    </button>
+                </div>
+            </div>
+        </ng-template>
+    </ng-template>
+    <div class="row">
+        <app-footer class="w-100"></app-footer>
+    </div>
+</div>

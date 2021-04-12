@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "satisfaccionsmp"
+  },
+  "targets": {
+    "satisfaccionsmp": {
+      "hosting": {
+        "satisfaccionSMP": [
+          "satisfaccionsmp"
+        ]
+      }
+    }
+  }
+}
