@@ -1,24 +1,33 @@
+<body background="../../assets/FondoFuego1.jpeg"></body>
+
 <div class="container main-ctn h-90">
     <div class="row text-center">
         <div class="col">
-            <img class="main-logo" src="../../assets/logoCursos.png" />
+            <div class="paddin-contenido">
+                <div class="fondoGris">
+                    <div>
+                        <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                    </div>
+                    <img class="mainLogoCursos" src="../../assets/LogoCursosBlanco.png" />
+                    <div class="row text-center">
+                        <div class="col mt-4 mb-4">
+                            <button class="btn-main  mb-4" class="sorteo-buttom" mat-raised-button
+                                (click)="goToSurveys()">
+                                <p class="tex-buttom1">SORTEOS</p>
+                                <p class="tex-buttom2">SMP</p>
+                            </button>
+                            <img class="iconFlama" src="../../assets/Flama 1.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col" class="margin-admin">
+                    <a routerLink="/admin" class="admin-access-ref">
+                        Entrar como administrador
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row text-center">
-        <div class="col mt-4 mb-4">
-            <button class="btn-main  mb-4" mat-raised-button (click)="goToSurveys()">
-                Sorteos SMP
-            </button>
-        </div>
-    </div>
-    <div class="row text-center">
-        <div class="col">
-            <a routerLink="/admin" class="admin-access-ref">
-                Entrar como administrador
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <app-footer class="w-100" ></app-footer>
-    </div>
-</div>

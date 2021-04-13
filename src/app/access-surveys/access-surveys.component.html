@@ -1,26 +1,28 @@
+<body background="../../assets/GM 2019-10-2 1.png"></body>
 <div class="container main-ctn h-90">
     <div class="row text-center">
         <div class="col">
-            <img class="main-logo" src="../../assets/logoCursos.png" />
+            <div class="paddin-contenido">
+                <div class="fondoGris">
+                    <div>
+                        <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                    </div>
+                    <img class="mainLogoCursos" src="../../assets/LogoCursosBlanco.png" />
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <form class="form-field-cnt">
+                        <input placeholder="PIN" [(ngModel)]="claveId" name="claveId" type="text" class="inputPin">
+                    </form>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <button class="ingresarButtom" mat-raised-button (click)="goToSurveysMain()">
+                        Ingresar
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="row text-center">
-        <div class="col">
-            <form class="form-field-cnt ">
-                <input placeholder="PIN" [(ngModel)]="claveId" name="claveId" type="text">
-            </form>
-        </div>
-    </div>
-
-    <div class="row text-center">
-        <div class="col">
-            <button class="btn-main" mat-raised-button (click)="goToSurveysMain()">
-                Ingresar
-            </button>
-        </div>
-    </div>
-    <div class="row">
-        <app-footer class="w-100"></app-footer>
-    </div>
-</div>

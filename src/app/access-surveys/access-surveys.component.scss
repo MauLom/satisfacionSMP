@@ -14,3 +14,46 @@
         color: #666666;
     }
 }
+.fondoGris{
+    background-color: rgba(40, 40, 40, 0.6);
+    z-index: -1;
+    border-radius: 10px;
+}
+.mainLogoCursos{
+    margin-bottom: 10%;
+    max-width: 150px;
+    max-height: 300px;
+}
+.mainLogoSmp{
+    max-width: 50px;
+    margin-bottom: 35px;
+}
+.iconFlama{
+    max-width: 35px;
+    max-height: 35px;
+    display: flex;
+    margin-left: 145px;
+    margin-top: 20px;
+}
+.paddin-contenido{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.ingresarButtom{
+    background-color: #C0272D;
+    border-radius: 10px;
+    color: #ffffff;
+    max-width: 200px;
+}
+.inputPin{
+    background-color: black;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    max-width: 150px;
+    border-radius: 7px;
+    border-color: #000;
+}
+.fondoGris2{
+    background-color: rgba(40, 40, 40, 0.6);
+}
