@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { BrowserModule } from '@angular/platform-browser';
     FormsModule,
     CommonModule,
     BrowserModule,
+    MatTabsModule,
   ],
   exports: [
     MatButtonModule,
@@ -22,6 +24,7 @@ import { BrowserModule } from '@angular/platform-browser';
     FormsModule,
     CommonModule,
     BrowserModule,
+    MatTabsModule,
   ]
 })
 export class MaterialModule { }
