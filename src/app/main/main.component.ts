@@ -14,9 +14,6 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  goToURL(data: any[]){
-    this.router.navigate(data);
-  }
   goToSurveys(){
     this.router.navigate(["/client"]);
   }

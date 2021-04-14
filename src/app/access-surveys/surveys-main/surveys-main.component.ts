@@ -11,11 +11,11 @@ import { Observable } from 'rxjs';
 export class SurveysMainComponent implements OnInit {
 
   claveEncontrada:boolean | undefined;
-  showQuestions:boolean = false;
   claveABuscar:String | undefined;
   userNameInpt:String = "";
   userSurNameInpt:String = "";
   userEmailInpt:String = "";
+  userId:Number = 0;
 
 
   constructor(
@@ -50,6 +50,6 @@ export class SurveysMainComponent implements OnInit {
       apellido:userSurName,
       email: userEmail
     });
-    this.showQuestions = true;
+    this.router.navigate(["/questions"], { queryParams: { clave: this.claveABuscar, userId: randomId}});
   }
 }

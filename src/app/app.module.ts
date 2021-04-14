@@ -13,6 +13,7 @@ import { SurveysMainComponent } from './access-surveys/surveys-main/surveys-main
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { FooterComponent } from './footer/footer.component';
+import { SurveysQuestionsComponent } from './access-surveys/surveys-questions/surveys-questions.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     AccessAdminComponent,
     AccessSurveysComponent,
     SurveysMainComponent,
+    SurveysQuestionsComponent,
     FooterComponent
     
   ],
