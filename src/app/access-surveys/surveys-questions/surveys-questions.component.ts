@@ -25,10 +25,17 @@ export class SurveysQuestionsComponent implements OnInit {
         this.claveSurvey = params['clave'];
         this.claveUser = params['userId']
       })
-
+    let propertiesNames: Array<any> =[];
+    let preguntas: Array<any> = [];
     let getInfo = this.db.database.ref('survey/' + this.claveSurvey).once('value').then(
       snapshot => {
-        console.log("snapshot val", snapshot.val())
+        Object.entries(snapshot.val()).forEach( element =>{
+          propertiesNames.push(element[0])
+        })
+        propertiesNames.forEach(propertie =>{
+          preguntas.push(snapshot.val()[propertie])
+        })
+        console.log("Arr with names", preguntas)
       }
     )
   }
