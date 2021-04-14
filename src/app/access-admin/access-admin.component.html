@@ -13,12 +13,16 @@
                     <img class="main-logo" src="../../../assets/LogoCursosBlanco.png" />
                 </div>
             </div>
-            <!-- <form class="form-field-cnt inputs">
-                <div class="marginButom1">
-                    <input placeholder="Nombre" class="mt-2 mb-1 inpt-main inputNombre" name="name"
-                        type="text" [(ngModel)]="userNameInpt">
+            <form >
+                <div >
+                    <input placeholder="Usuario" name="user" type="text"
+                        [(ngModel)]="adminUser">
                 </div>
-            </form> -->
+                <div >
+                    <input placeholder="Email"  name="email" type="email"
+                        [(ngModel)]="adminEmail">
+                </div>
+            </form>
             <div class="row text-center">
                 <div class="col">
                     <button class="btn-main mt-2 btn-main ingresarButom" mat-raised-button>
@@ -26,4 +30,3 @@
                     </button>
                 </div>
             </div>
-            

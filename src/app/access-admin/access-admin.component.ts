@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccessAdminComponent implements OnInit {
 
+  adminUser:String ="";
+  adminEmail:String ="";
+
   constructor() { }
 
   ngOnInit(): void {

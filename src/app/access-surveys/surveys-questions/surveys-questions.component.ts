@@ -12,11 +12,12 @@ export class SurveysQuestionsComponent implements OnInit {
   claveSurvey: Number = 0;
   claveUser: Number = 0;
 
+
+  respArr: Array<Number> = []
+
   constructor(
     private route: ActivatedRoute,
     private db: AngularFireDatabase
-
-
   ) { }
 
   ngOnInit(): void {
@@ -25,19 +26,12 @@ export class SurveysQuestionsComponent implements OnInit {
         this.claveSurvey = params['clave'];
         this.claveUser = params['userId']
       })
-    let propertiesNames: Array<any> =[];
-    let preguntas: Array<any> = [];
-    let getInfo = this.db.database.ref('survey/' + this.claveSurvey).once('value').then(
-      snapshot => {
-        Object.entries(snapshot.val()).forEach( element =>{
-          propertiesNames.push(element[0])
-        })
-        propertiesNames.forEach(propertie =>{
-          preguntas.push(snapshot.val()[propertie])
-        })
-        console.log("Arr with names", preguntas)
-      }
-    )
   }
 
+  logAnswers(){
+    this.db.database.ref('survey/' + this.claveSurvey + '/answers').push({
+      user: this.claveUser,
+      responses: [0,0,0,0]
+    });
+  }
 }

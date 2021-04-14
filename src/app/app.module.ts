@@ -14,12 +14,16 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { FooterComponent } from './footer/footer.component';
 import { SurveysQuestionsComponent } from './access-surveys/surveys-questions/surveys-questions.component';
+import { AdminMainComponent } from './access-admin/admin-main/admin-main.component';
+import { AdminGenerateSurveyComponent } from './access-admin/admin-generate-survey/admin-generate-survey.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     AccessAdminComponent,
+    AdminMainComponent,
+    AdminGenerateSurveyComponent,
     AccessSurveysComponent,
     SurveysMainComponent,
     SurveysQuestionsComponent,
