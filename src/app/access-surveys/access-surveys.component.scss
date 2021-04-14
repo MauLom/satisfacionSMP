@@ -25,8 +25,10 @@
     max-height: 300px;
 }
 .mainLogoSmp{
-    max-width: 50px;
+    max-width: 70px;
     margin-bottom: 35px;
+    z-index: 1;
+    margin-top: -110px;
 }
 .iconFlama{
     max-width: 35px;
@@ -40,20 +42,26 @@
     padding-right: 25px;
 }
 .ingresarButtom{
-    background-color: #C0272D;
-    border-radius: 10px;
-    color: #ffffff;
-    max-width: 200px;
+    background-color: #c0272d;
+    color:#ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    min-height: 60px;
+    width: 50%;
+    border-radius: 15px; 
 }
 .inputPin{
     background-color: black;
-    font-family: inherit;
     font-weight: bold;
+    text-transform:none;
     font-size: 20px;
-    max-width: 150px;
-    border-radius: 7px;
-    border-color: #000;
+    font-family: system-ui;
+    max-width: 250px;
 }
 .fondoGris2{
     background-color: rgba(40, 40, 40, 0.6);
+}
+.bgSmp{
+    z-index: -1;
+
 }

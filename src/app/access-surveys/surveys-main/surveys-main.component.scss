@@ -3,3 +3,69 @@
     position: absolute;
 
 }
+.mainLogoSmp{
+    max-width: 70px;
+    margin-bottom: 35px;
+    z-index: 1;
+    margin-top: -105px;
+}
+.main-logo{
+    margin-bottom: 10%;
+    max-width: 150px;
+    max-height: 300px;
+}
+.inputs{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 50px;
+    border: 0px solid;
+    margin-top: -20px;
+}
+.inputNombre{
+    background-color: black;
+    font-weight: bold;
+    text-transform:none;
+    font-size: 20px;
+    font-family: system-ui
+}
+.inputApellido{
+    background-color: black;
+    font-weight: bold;
+    text-transform:none;
+    font-size: 20px;
+    font-family: system-ui
+}
+.inputEmail{
+    background-color: black;
+    font-weight: bold;
+    text-transform:none;
+    font-size: 20px;
+    font-family: system-ui
+}
+.ingresarButom{
+    background-color: #c0272d;
+    color:#ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    min-height: 60px;
+    width: 50%;
+    border-radius: 15px; 
+}
+.marginButom1{
+ margin-top: -20px;
+}
+.marginButom2{
+    margin-top: 10px;
+}
+.fondoGris{
+    background-color: rgba(40, 40, 40, 0.6);
+    border-radius: 10px;
+}
+.paddin-contenido{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.bgSmp{
+    z-index: -1;
+}

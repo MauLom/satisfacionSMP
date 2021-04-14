@@ -50,8 +50,10 @@
     max-height: 300px;
 }
 .mainLogoSmp{
-    max-width: 50px;
+    max-width: 70px;
     margin-bottom: 35px;
+    z-index: 1;
+    margin-top: -110px;
 }
 .iconFlama{
     max-width: 35px;
@@ -63,4 +65,8 @@
 .paddin-contenido{
     padding-left: 25px;
     padding-right: 25px;
+}
+.bgSmp{
+    z-index: -1;
+
 }
