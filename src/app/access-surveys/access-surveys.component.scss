@@ -57,11 +57,14 @@
     font-size: 20px;
     font-family: system-ui;
     max-width: 250px;
+    color: #ffffff;
 }
 .fondoGris2{
     background-color: rgba(40, 40, 40, 0.6);
 }
 .bgSmp{
     z-index: -1;
-
+}
+input::placeholder {
+    color:#ffffff;
 }
