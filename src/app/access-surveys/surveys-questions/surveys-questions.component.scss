@@ -1,0 +1,67 @@
+.main-ctn {
+    top: 10%;
+    position: absolute;
+}
+.fondoGris{
+    background-color: #f1f1f1;
+    z-index: -1;
+    border-radius: 10px;
+}
+.paddin-contenido{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.bgSmp{
+    z-index: -1;
+}
+.mainLogoSmp{
+    max-width: 70px;
+    margin-bottom: 35px;
+    z-index: 1;
+    margin-top: -110px;
+}
+.tex-principal{
+    text-align: justify;
+    font-weight: 350px;
+    font-family: inherit;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tex-margin{
+    margin-top: 50px;
+}
+.paddin-contenido{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.calificacion{
+    border: none;
+    font-size: 30px;
+    font-weight: 900;
+    margin-right: 30px;
+    color: #ffff;
+    background:none;
+}
+.fondo-calificacion1{
+    background-color: black;
+    padding: 1px;
+    width: 95%;
+    border-radius: 50px;
+    margin-top: 25px;
+}
+.fondo-calificacion2{
+    background-color: black;
+    padding: 1px;
+    width: 95%;
+    border-radius: 50px;
+    margin-top: 35px;
+}
+.relleno{
+    margin-top: 35px;
+}
+.logoCursoNegro{
+    margin-top: -35px;
+}
+
+
