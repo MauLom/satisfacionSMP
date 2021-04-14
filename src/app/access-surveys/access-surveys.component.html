@@ -1,9 +1,12 @@
-<body background="../../assets/GM 2019-10-2 1.png"></body>
+<body background="../../assets/FondoFuego1.jpeg"></body>
 <div class="container main-ctn h-90">
     <div class="row text-center">
         <div class="col">
             <div class="paddin-contenido">
                 <div class="fondoGris">
+                    <div>
+                        <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                    </div>
                     <div>
                         <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
                     </div>
@@ -13,13 +16,13 @@
             <div class="row text-center">
                 <div class="col">
                     <form class="form-field-cnt">
-                        <input placeholder="PIN" [(ngModel)]="claveId" name="claveId" type="text" class="inputPin">
+                        <input placeholder="PIN" [(ngModel)]="claveId" name="claveId" type="text" class="mt-2 mb-1 inpt-main inputPin">
                     </form>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col">
-                    <button class="ingresarButtom" mat-raised-button (click)="goToSurveysMain()">
+                    <button class="mt-2 btn-main ingresarButtom" mat-raised-button (click)="goToSurveysMain()">
                         Ingresar
                     </button>
                 </div>
