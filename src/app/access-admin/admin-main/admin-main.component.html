@@ -1,19 +1,27 @@
-<mat-drawer-container>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-        <button (click)="goToGenerateSurvey()">
-            Generar sorteo
-        </button>
-    </mat-drawer>
-    <div class="example-sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
-            Esto debe ser el iconito para el menu
-        </button>
-    </div>
-    <div>
-        Area Banner
-    </div>
-    <mat-tab-group>
-        <mat-tab label="Sorteo Activo"> Content 1 </mat-tab>
-        <mat-tab label="Historial"> Content 2 </mat-tab>
-    </mat-tab-group>
-</mat-drawer-container>
+<div class="fondoGris">
+    <mat-drawer-container>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            <button (click)="goToGenerateSurvey()">
+                Generar sorteo
+            </button>
+        </mat-drawer>
+        <div class="example-sidenav-content">
+            <div class="sorteo">
+                <button type="button" mat-button (click)="drawer.toggle()">
+                    <img src="../../../assets/Flama 1.png" />
+                    <p>sorteo</p>
+                </button>
+            </div>
+        </div>
+        <div>
+            <img src="../../../assets/LogoSMP.png" class="perfil" />
+        </div>
+        <div>
+            <p class="usuario">Usuario</p>
+        </div>
+        <mat-tab-group class="met-tab">
+            <mat-tab label="Sorteo Activo"> Content 1 </mat-tab>
+            <mat-tab label="Historial"> Content 2 </mat-tab>
+        </mat-tab-group>
+    </mat-drawer-container>
+</div>
