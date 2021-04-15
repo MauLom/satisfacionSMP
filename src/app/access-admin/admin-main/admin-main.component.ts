@@ -18,10 +18,14 @@ export class AdminMainComponent implements OnInit {
 
   surveys: Observable<any[]> | undefined;
 
+  showGanador: boolean = false;
+  nameGanador: String = "";
+  pinGanador: Number = 0;
+
   constructor(
     private db: AngularFireDatabase,
     private router: Router
-  ) { 
+  ) {
     this.surveys = db.list('survey/252525/answers').valueChanges()
   }
 
@@ -74,6 +78,26 @@ export class AdminMainComponent implements OnInit {
 
         /*Para saber el 100% de la respuesta, debo  multiplicar el maxClasificacion por el numero de participantes */
         /* */
+      })
+  }
+
+  obtenerGanador() {
+    this.arrSurveys?.forEach(
+      element => {
+        let idParticipantes: Array<any> = [];
+        let getDetailEachSurveyAnswers = this.db.database.ref('survey/' + element[0] + '/answers').once('value').then(
+          snapshot => {
+            Object.entries(snapshot.val())?.forEach(
+              each => {
+                idParticipantes.push(each[0])
+              })
+
+            let randomParticipant = Math.floor((Math.random() * (idParticipantes.length - 0 + 0)) + 0);;
+            
+            this.nameGanador = snapshot.val()[idParticipantes[randomParticipant]].user;
+            this.pinGanador =  snapshot.val()[idParticipantes[randomParticipant]].pinToWin;
+            this.showGanador = true;
+          })
       })
   }
 

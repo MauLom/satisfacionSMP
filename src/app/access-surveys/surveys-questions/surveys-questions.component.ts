@@ -15,6 +15,9 @@ export class SurveysQuestionsComponent implements OnInit {
 
   respArr: Array<Number> = []
 
+  pinGenerado: boolean = false;
+
+  pinParticipante: number = 0;
   constructor(
     private route: ActivatedRoute,
     private db: AngularFireDatabase
@@ -31,14 +34,17 @@ export class SurveysQuestionsComponent implements OnInit {
   logAnswers(idxAnswer:number, doLog:boolean, clasificacion:number) {
     let userName = "";
     if (doLog) {
+      let randomPin = Math.floor((Math.random() * (999 - 10 + 1)) + 10);;
       let getInfo = this.db.database.ref('users/' + this.claveUser).once('value').then(
         snapshot => {
           userName = snapshot.val().nombre + ' ' + snapshot.val().apellido;
           this.db.database.ref('survey/' + this.claveSurvey + '/answers/' + this.claveUser).set({
             user: userName,
-            responses: [0, 0, 0, 0],
-            pinToWin: 56
+            responses: this.respArr,
+            pinToWin: randomPin
           })
+          this.pinParticipante = randomPin;
+          this.pinGenerado = true;
         })
     } else {
       if(null !=  this.respArr[idxAnswer]){
@@ -47,6 +53,5 @@ export class SurveysQuestionsComponent implements OnInit {
         this.respArr.push(clasificacion);
       }
     }
-
   }
 }

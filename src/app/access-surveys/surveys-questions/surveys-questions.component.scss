@@ -30,7 +30,7 @@
 }
 
 .main-ctn {
-    top: 10%;
+    top: 0%;
     position: absolute;
 }
 .fondoGris {
@@ -106,4 +106,107 @@
 }
 .footer{
     margin-top: -50px !important;
+}
+.main-ctn {
+    top: 10%;
+    position: absolute;
+}
+.fondoGris{
+    background-color: #f1f1f1;
+    z-index: -1;
+    border-radius: 10px;
+}
+.paddin-contenido{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.bgSmp{
+    z-index: -1;
+}
+.mainLogoSmp{
+    max-width: 70px;
+    margin-bottom: 35px;
+    z-index: 1;
+    margin-top: -110px;
+}
+.pinButtom{
+    background-color: #c0272d;
+    color:#ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    min-height: 60px;
+    width: 50%;
+    border-radius: 15px;
+}
+.inputs{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 50px;
+    border: 0px solid;
+    margin-top: -20px;
+}
+.inputCap{
+    background-color: #ffffff;
+    font-weight: bold;
+    text-transform:none;
+    font-size: 15px;
+    font-family: system-ui;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+}
+.inputMae{
+    background-color: #ffffff;
+    font-weight: bold;
+    text-transform:none;
+    font-size: 15px;
+    font-family: system-ui;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+}
+.inputFecha{
+    background-color: #ffffff;
+    font-weight: bold;
+    text-transform:none;
+    font-size: 15px;
+    font-family: system-ui;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+}
+.pinSorteo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #C0272D;
+}
+.titulo{
+    text-transform: uppercase;
+    color: #C0272D;
+    font-weight: 900;
+    font-size: 25px;
+}
+.aviso{
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    font-family: 'Roboto';
+}
+.paddin-contenido2{
+    padding-right: 25px;
+    margin-right: 15%;
 }
