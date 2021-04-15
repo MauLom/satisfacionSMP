@@ -8,6 +8,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 })
 export class AdminMainComponent implements OnInit {
 
+  constructor() { }
 
   ngOnInit(): void {
   }

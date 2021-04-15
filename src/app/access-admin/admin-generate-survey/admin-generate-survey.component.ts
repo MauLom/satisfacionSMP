@@ -42,7 +42,8 @@ export class AdminGenerateSurveyComponent implements OnInit {
       maestro: this.slctdMaestro,
       capitulo: this.slctdCapitulo,
       fecha: this.slctdDate,
-      template: "main"
+      template: "main",
+      status: 1
     });
     this.pinGenerado=true;
     this.pin=randomId;
