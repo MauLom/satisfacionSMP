@@ -28,16 +28,25 @@ export class SurveysQuestionsComponent implements OnInit {
       })
   }
 
-  logAnswers() {
+  logAnswers(idxAnswer:number, doLog:boolean, clasificacion:number) {
     let userName = "";
-    let getInfo = this.db.database.ref('users/' + this.claveUser).once('value').then(
-      snapshot => {
-        userName = snapshot.val().nombre + ' ' + snapshot.val().apellido;
-        this.db.database.ref('survey/' + this.claveSurvey + '/answers/' + this.claveUser).set({
-          user: userName,
-          responses: [0, 0, 0, 0],
-          pinToWin: 56
+    if (doLog) {
+      let getInfo = this.db.database.ref('users/' + this.claveUser).once('value').then(
+        snapshot => {
+          userName = snapshot.val().nombre + ' ' + snapshot.val().apellido;
+          this.db.database.ref('survey/' + this.claveSurvey + '/answers/' + this.claveUser).set({
+            user: userName,
+            responses: [0, 0, 0, 0],
+            pinToWin: 56
+          })
         })
-      })
+    } else {
+      if(null !=  this.respArr[idxAnswer]){
+        this.respArr[idxAnswer] = clasificacion
+      }else {
+        this.respArr.push(clasificacion);
+      }
+    }
+
   }
 }

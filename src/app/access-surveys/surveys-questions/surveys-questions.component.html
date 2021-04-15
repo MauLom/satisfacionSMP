@@ -18,20 +18,20 @@
                                 combustibles, tips, control de
                                 temperaturas, etc).</p>
                             <div class="fondo-calificacion1">
-                                <button class="calificacion">1</button>
-                                <button class="calificacion">2</button>
-                                <button class="calificacion">3</button>
-                                <button class="calificacion">4</button>
-                                <button class="calificacion">5</button>
+                                <button class="calificacion" (click)="logAnswers(1, false, 1)">1</button>
+                                <button class="calificacion" (click)="logAnswers(1, false, 2)">2</button>
+                                <button class="calificacion" (click)="logAnswers(1, false, 3)">3</button>
+                                <button class="calificacion" (click)="logAnswers(1, false, 4)">4</button>
+                                <button class="calificacion" (click)="logAnswers(1, false, 5)">5</button>
                             </div>
                             <p class="tex-principal tex-margin"><b>Califica el método de enseñanza del Maestro
                                     Parrillero</b>&nbsp;(manejo del grupo, indicaciones, seguimiento, etc).</p>
                             <div class="fondo-calificacion2">
-                                <button class="calificacion">1</button>
-                                <button class="calificacion">2</button>
-                                <button class="calificacion">3</button>
-                                <button class="calificacion">4</button>
-                                <button class="calificacion" (click)="logAnswers()">5</button>
+                                <button class="calificacion" (click)="logAnswers(2, false, 1)">1</button>
+                                <button class="calificacion" (click)="logAnswers(2, false, 2)">2</button>
+                                <button class="calificacion" (click)="logAnswers(2, false, 3)">3</button>
+                                <button class="calificacion" (click)="logAnswers(2, false, 4)">4</button>
+                                <button class="calificacion" (click)="logAnswers(2, false, 5)">5</button>
                             </div>
                             <div class="relleno">.</div>
                             <div class="logoCursoNegro">
@@ -50,21 +50,21 @@
                             <p class="tex-principal">Del 1 al 5: ¿Consideras que el Maestro Parrillero resolvió todas
                                 tus dudas?</p>
                             <div class="fondo-calificacion1">
-                                <button class="calificacion">1</button>
-                                <button class="calificacion">2</button>
-                                <button class="calificacion">3</button>
-                                <button class="calificacion">4</button>
-                                <button class="calificacion">5</button>
+                                <button class="calificacion" (click)="logAnswers(3, false, 1)">1</button>
+                                <button class="calificacion" (click)="logAnswers(3, false, 2)">2</button>
+                                <button class="calificacion" (click)="logAnswers(3, false, 3)">3</button>
+                                <button class="calificacion" (click)="logAnswers(3, false, 4)">4</button>
+                                <button class="calificacion" (click)="logAnswers(3, false, 5)">5</button>
                             </div>
                             <p class="tex-principal tex-margin"><b>Califica la atención que recibiste por parte del
                                     staff SMP </b>&nbsp;(líder de tienda, apoyos de cocina, aprendices, coordinadores).
                             </p>
                             <div class="fondo-calificacion2">
-                                <button class="calificacion">1</button>
-                                <button class="calificacion">2</button>
-                                <button class="calificacion">3</button>
-                                <button class="calificacion">4</button>
-                                <button class="calificacion">5</button>
+                                <button class="calificacion" (click)="logAnswers(4, false, 1)">1</button>
+                                <button class="calificacion" (click)="logAnswers(4, false, 2)">2</button>
+                                <button class="calificacion" (click)="logAnswers(4, false, 3)">3</button>
+                                <button class="calificacion" (click)="logAnswers(4, false, 4)">4</button>
+                                <button class="calificacion" (click)="logAnswers(5, false, 5)">5</button>
                             </div>
                             <div class="relleno">.</div>
                             <div class="logoCursoNegro">
@@ -83,20 +83,20 @@
                             <p class="tex-principal"> Califica sabor, tiempos de elaboración y presentación del menú
                                 degustado en el curso.</p>
                             <div class="fondo-calificacion1">
-                                <button class="calificacion">1</button>
-                                <button class="calificacion">2</button>
-                                <button class="calificacion">3</button>
-                                <button class="calificacion">4</button>
-                                <button class="calificacion">5</button>
+                                <button class="calificacion" (click)="logAnswers(5, false, 1)">1</button>
+                                <button class="calificacion" (click)="logAnswers(5, false, 2)">2</button>
+                                <button class="calificacion" (click)="logAnswers(5, false, 3)">3</button>
+                                <button class="calificacion" (click)="logAnswers(5, false, 4)">4</button>
+                                <button class="calificacion" (click)="logAnswers(5, false, 5)">5</button>
                             </div>
                             <p class="tex-principal tex-margin">Del 1 al 5, ¿consideras que el precio del curso es justo
                                 a la experiencia recibida por parte de la SMP? (precio vs calidad).</p>
                             <div class="fondo-calificacion2">
-                                <button class="calificacion">1</button>
-                                <button class="calificacion">2</button>
-                                <button class="calificacion">3</button>
-                                <button class="calificacion">4</button>
-                                <button class="calificacion">5</button>
+                                <button class="calificacion" (click)="logAnswers(6, false, 1)">1</button>
+                                <button class="calificacion" (click)="logAnswers(6, false, 2)">2</button>
+                                <button class="calificacion" (click)="logAnswers(6, false, 3)">3</button>
+                                <button class="calificacion" (click)="logAnswers(6, false, 4)">4</button>
+                                <button class="calificacion" (click)="logAnswers(6, false, 5)">5</button>
                             </div>
                             <div class="relleno">.</div>
                             <div class="logoCursoNegro">
@@ -114,11 +114,11 @@
                             </div>
                             <p class="tex-principal">Califica las instalaciones del capítulo donde tomaste el curso.</p>
                             <div class="fondo-calificacion1">
-                                <button class="calificacion">1</button>
-                                <button class="calificacion">2</button>
-                                <button class="calificacion">3</button>
-                                <button class="calificacion">4</button>
-                                <button class="calificacion">5</button>
+                                <button class="calificacion" (click)="logAnswers(7, false, 1)">1</button>
+                                <button class="calificacion" (click)="logAnswers(7, false, 2)">2</button>
+                                <button class="calificacion" (click)="logAnswers(7, false, 3)">3</button>
+                                <button class="calificacion" (click)="logAnswers(7, false, 4)">4</button>
+                                <button class="calificacion" (click)="logAnswers(7, false, 5)">5</button>
                             </div>
                             <div class="relleno">.</div>
                             <div class="logoCursoNegro">

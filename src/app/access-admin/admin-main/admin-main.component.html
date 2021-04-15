@@ -25,8 +25,8 @@
         </mat-tab>
         <mat-tab label="Sorteos Activos">
             <div *ngFor="let item of surveys | async">
-                {{ item.user }}
-                {{ item.pinToWin }}
+                <span>{{ item.user }}</span>
+                <span>{{ item.pinToWin }}</span>
             </div>
         </mat-tab>
     </mat-tab-group>
