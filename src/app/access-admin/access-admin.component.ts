@@ -35,4 +35,6 @@ export class AccessAdminComponent implements OnInit {
       this.router.navigate(["/adminMain"]);
     }
   }
+
+
 }

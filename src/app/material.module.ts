@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     CommonModule,
     BrowserModule,
     MatTabsModule,
+    MatSidenavModule
   ],
   exports: [
     MatButtonModule,
@@ -25,6 +27,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     CommonModule,
     BrowserModule,
     MatTabsModule,
+    MatSidenavModule
   ]
 })
 export class MaterialModule { }
