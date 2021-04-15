@@ -28,10 +28,16 @@ export class SurveysQuestionsComponent implements OnInit {
       })
   }
 
-  logAnswers(){
-    this.db.database.ref('survey/' + this.claveSurvey + '/answers').push({
-      user: this.claveUser,
-      responses: [0,0,0,0]
-    });
+  logAnswers() {
+    let userName = "";
+    let getInfo = this.db.database.ref('users/' + this.claveUser).once('value').then(
+      snapshot => {
+        userName = snapshot.val().nombre + ' ' + snapshot.val().apellido;
+        this.db.database.ref('survey/' + this.claveSurvey + '/answers/' + this.claveUser).set({
+          user: userName,
+          responses: [0, 0, 0, 0],
+          pinToWin: 56
+        })
+      })
   }
 }

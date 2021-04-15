@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
   imports: [
     MatButtonModule,
@@ -17,7 +17,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     CommonModule,
     BrowserModule,
     MatTabsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatProgressBarModule
   ],
   exports: [
     MatButtonModule,
@@ -27,7 +28,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     CommonModule,
     BrowserModule,
     MatTabsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatProgressBarModule
   ]
 })
 export class MaterialModule { }

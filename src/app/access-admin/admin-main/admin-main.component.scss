@@ -1,0 +1,35 @@
+::ng-deep .mat-tab-list {
+    background-color: #dadada;
+    text-align: -webkit-center;
+    border-bottom: 0px;
+    max-width: 60%;
+    margin-left: 20%;
+    border-radius: 20px;
+}
+::ng-deep .mat-tab-label-content {
+    color: white;
+}
+
+::ng-deep .mat-tab-header {
+    border-bottom: 0px;
+}
+::ng-deep .mat-tab-label-active {
+    background-color: white;
+    border-radius: 20px;
+    .mat-tab-label-content {
+        color: #c0272d !important;
+    }
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #dadada;
+    height: 0px;
+}
+
+::ng-deep .mat-progress-bar{
+    height: 10px !important;
+}
+.tab-style {
+    border: 1px solid black;
+    border-radius: 150px;
+}

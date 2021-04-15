@@ -1,10 +1,9 @@
 <body background="../../../assets/FondoPreguntas.png"></body>
 <div class="container main-ctn h-90">
-    <div class="row text-center">
-        <div class="col">
-            <div class="paddin-contenido">
-
-                <mat-tab-group>
+    <div class="row text-center h-100">
+        <div class="col h-100">
+            <div class="paddin-contenido ">
+                <mat-tab-group class="h-100" headerPosition="below">
                     <mat-tab label="1">
                         <div class="fondoGris">
                             <div>
@@ -32,7 +31,7 @@
                                 <button class="calificacion">2</button>
                                 <button class="calificacion">3</button>
                                 <button class="calificacion">4</button>
-                                <button class="calificacion">5</button>
+                                <button class="calificacion" (click)="logAnswers()">5</button>
                             </div>
                             <div class="relleno">.</div>
                             <div class="logoCursoNegro">
@@ -165,10 +164,7 @@
                             </div>
                         </div>
                     </mat-tab>
-
                 </mat-tab-group>
-
-
             </div>
         </div>
     </div>
