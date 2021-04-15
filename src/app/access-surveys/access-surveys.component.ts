@@ -18,7 +18,11 @@ export class AccessSurveysComponent implements OnInit {
   }
 
 
-  goToSurveysMain(){
-    this.router.navigate(["/surveysMain"], { queryParams: { clave: this.claveId}});
+  goToSurveysMain() {
+    if (0 < Number.parseInt(this.claveId.toString())) {
+      console.log("llena los campos")
+    } else {
+      this.router.navigate(["/surveysMain"], { queryParams: { clave: this.claveId } });
+    }
   }
 }
