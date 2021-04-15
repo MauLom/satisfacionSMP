@@ -24,9 +24,14 @@
             </button>
         </mat-tab>
         <mat-tab label="Sorteos Activos">
-            <div *ngFor="let item of surveys | async">
-                <span>{{ item.user }}</span>
-                <span>{{ item.pinToWin }}</span>
+            <div class="row cadaParticipante" *ngFor="let item of surveys | async">
+                <div class="col">{{ item.user }}</div>
+                <div class="col">{{ item.pinToWin }}</div>
+            </div>
+            <div class="row">
+                <button class="btn-sortear" (click)="obtenerGanador()">
+                    Sortear
+                </button>
             </div>
         </mat-tab>
     </mat-tab-group>

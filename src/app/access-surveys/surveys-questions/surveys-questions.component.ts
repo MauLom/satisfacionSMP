@@ -34,10 +34,11 @@ export class SurveysQuestionsComponent implements OnInit {
       let getInfo = this.db.database.ref('users/' + this.claveUser).once('value').then(
         snapshot => {
           userName = snapshot.val().nombre + ' ' + snapshot.val().apellido;
+          let randomPin = Math.floor((Math.random() * (999 - 10 + 1)) + 10);;
           this.db.database.ref('survey/' + this.claveSurvey + '/answers/' + this.claveUser).set({
             user: userName,
-            responses: [0, 0, 0, 0],
-            pinToWin: 56
+            responses: this.respArr,
+            pinToWin: randomPin
           })
         })
     } else {
@@ -47,6 +48,6 @@ export class SurveysQuestionsComponent implements OnInit {
         this.respArr.push(clasificacion);
       }
     }
-
+    console.log("Arr Respuestas => ", this.respArr)
   }
 }
