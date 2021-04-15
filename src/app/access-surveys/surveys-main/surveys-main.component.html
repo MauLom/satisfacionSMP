@@ -11,38 +11,6 @@
                         <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
                     </div>
                     <img class="main-logo" src="../../../assets/LogoCursosBlanco.png" />
-<<<<<<< HEAD
-                </div>
-            </div>
-            <ng-container *ngIf="claveEncontrada else idNotFound">
-                <div class="row text-center">
-                    <div class="col">
-                        <div class="col mb-2">
-                            <form class="form-field-cnt inputs">
-                                <div class="marginButom1">
-                                    <input required placeholder="Nombre" class="mt-2 mb-1 inpt-main inputNombre" name="name"
-                                        type="text" [(ngModel)]="userNameInpt">
-                                </div>
-                                <div required class="marginButom2">
-                                    <input placeholder="Apellido" class="mb-1 inpt-main inputApellido" name="name"
-                                        type="text" [(ngModel)]="userSurNameInpt">
-                                </div>
-                                <div class="marginButom2">
-                                    <input required placeholder="Email" class="inpt-main inputEmail" name="email" type="email"
-                                        [(ngModel)]="userEmailInpt">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col">
-                        <button class="mt-2 btn-main ingresarButom" mat-raised-button 
-                            (click)="writeUserData(userNameInpt, userSurNameInpt,userEmailInpt)">
-                            Ingresar
-                        </button>
-                    </div>
-=======
                     <ng-container *ngIf="claveEncontrada else idNotFound">
                         <div class="row text-center">
                             <div class="col">
@@ -74,7 +42,6 @@
                             <div class="relleno">.</div>
                         </div>
                     </ng-container>
->>>>>>> ce365d6bd6acab799abac1fc9a4bc669443a1d48
                 </div>
             </div>
         </div>
