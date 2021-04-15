@@ -26,26 +26,27 @@
     height: 0px;
 }
 
-::ng-deep .mat-progress-bar{
+::ng-deep .mat-progress-bar {
     height: 10px !important;
 }
 .tab-style {
     border: 1px solid black;
     border-radius: 150px;
 }
-.fondoGris{
+.fondoGris {
     background-color: gray;
 }
-.perfil{
+.perfil {
     max-width: 100px;
     margin-left: 40%;
+    margin-bottom: 6%;
 }
-.sorteo{
+.sorteo {
     margin-top: 25px;
     margin-left: 15px;
-    color:#C0272D
+    color: #c0272d;
 }
-.usuario{
+.usuario {
     background-color: #282828;
     color: #f1f1f1;
     width: 70%;
@@ -60,15 +61,15 @@
     margin-top: 25px;
     padding: 15px;
 }
-.met-tab{
+.met-tab {
     margin-left: 20%;
     background-color: #282828;
 }
-.cadaParticipante{
+.cadaParticipante {
     margin: 2%;
     font-size: 16px;
 }
-.btn-sortear{
+.btn-sortear {
     background-color: #c0272d;
     color: #ffffff;
     font-size: 24px;
@@ -77,4 +78,129 @@
     width: 50%;
     border-radius: 15px;
     margin-left: 25%;
+}
+
+.letra-historial {
+    color: rgb(250, 250, 250);
+    transform: none;
+}
+.generate {
+    background-color: #c0272d;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 20px;
+}
+.main-ctn {
+    top: 10%;
+    position: absolute;
+}
+.fondoGris {
+    background-color: #f1f1f1;
+    z-index: -1;
+    border-radius: 10px;
+}
+.paddin-contenido {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.bgSmp {
+    z-index: -1;
+}
+.mainLogoSmp {
+    max-width: 70px;
+    margin-bottom: 35px;
+    z-index: 1;
+    margin-top: -110px;
+}
+.pinButtom {
+    background-color: #c0272d;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    min-height: 60px;
+    width: 50%;
+    border-radius: 15px;
+}
+.inputs {
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 50px;
+    border: 0px solid;
+    margin-top: -20px;
+}
+.inputCap {
+    background-color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 15px;
+    font-family: system-ui;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+}
+.inputMae {
+    background-color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 15px;
+    font-family: system-ui;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+}
+.inputFecha {
+    background-color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 15px;
+    font-family: system-ui;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+}
+.pinSorteo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #c0272d;
+}
+.titulo {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 900;
+    font-size: 25px;
+}
+.aviso {
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    font-family: "Roboto";
+}
+.pin-apariencia{
+    position: absolute;
+    font-size: 80px;
+    background-color: #C0272D;
+    border-radius: 100%;
+    color: white;
+    width: 40%;
+    left: 30%;
+}
+.name-apariencia{
+    color:#C0272D;
+    font-size: 30px;
+    font-style: bold;
 }

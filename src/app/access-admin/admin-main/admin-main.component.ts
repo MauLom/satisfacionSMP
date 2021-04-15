@@ -94,9 +94,9 @@ export class AdminMainComponent implements OnInit {
 
             let randomParticipant = Math.floor((Math.random() * (idParticipantes.length - 0 + 0)) + 0);;
             
-            console.log("El ganador es:", snapshot.val()[idParticipantes[randomParticipant]].user);
-            console.log("Con el pin", snapshot.val()[idParticipantes[randomParticipant]].pinToWin);
-
+            this.nameGanador = snapshot.val()[idParticipantes[randomParticipant]].user;
+            this.pinGanador =  snapshot.val()[idParticipantes[randomParticipant]].pinToWin;
+            this.showGanador = true;
           })
       })
   }

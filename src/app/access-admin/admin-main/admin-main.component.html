@@ -1,38 +1,65 @@
-<mat-drawer-container>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-        <button (click)="goToGenerateSurvey()">
-            Go to generate
-        </button>
-    </mat-drawer>
-    <div class="example-sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
-            Esto debe ser el iconito para el menu
-        </button>
-    </div>
-    <div>
-        Area Banner
-    </div>
-    <mat-tab-group>
-        <mat-tab label="Historial">
-            Historial
-            <div class="cont-historial" *ngFor = "let item of arrSurveys">
-                <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
-               
+<ng-container *ngIf="showGanador else principal">
+    <body background="../../../assets/FondoAdmin.jpeg">
+        <div class="container main-ctn h-90">
+            <div class="row text-center">
+                <div class="col">
+                    <div class="paddin-contenido">
+                        <div class="fondoGris">
+                            <div>
+                                <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                            </div>
+                            <div>
+                                <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                            </div>
+                            <h2 class="titulo"> EL ganador es:</h2>
+                            <div class="name-apariencia">
+                                {{nameGanador}}
+                            </div>
+                            <div class="pin-apariencia">
+                                {{pinGanador}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button (click)="checkParticipantes()">
-                HazmeClick
+        </div>
+    </body>
+</ng-container>
+<ng-template #principal>
+    <mat-drawer-container>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            <button (click)="goToGenerateSurvey()" class="generate">
+                Go to generate
             </button>
-        </mat-tab>
-        <mat-tab label="Sorteos Activos">
-            <div class="row cadaParticipante" *ngFor="let item of surveys | async">
-                <div class="col">{{ item.user }}</div>
-                <div class="col">{{ item.pinToWin }}</div>
-            </div>
-            <div class="row">
-                <button class="btn-sortear" (click)="obtenerGanador()">
-                    Sortear
-                </button>
-            </div>
-        </mat-tab>
-    </mat-tab-group>
-</mat-drawer-container>
+        </mat-drawer>
+        <div class="example-sidenav-content">
+            <button type="button" mat-button (click)="drawer.toggle()" class="sorteo">
+                <img src="../../../assets/Flama 1.png" />
+                <p>sorteo</p>
+            </button>
+        </div>
+        <div>
+            <img src="../../../assets/LogoSMP.png" class="perfil" />
+        </div>
+        <mat-tab-group>
+            <mat-tab label="Historial">
+                <p class="letra-historial">historial</p>
+                <div class="cont-historial" *ngFor="let item of arrSurveys">
+                    <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+
+                </div>
+            </mat-tab>
+            <mat-tab label="Sorteos Activos">
+                <div class="row cadaParticipante" *ngFor="let item of surveys | async">
+                    <div class="col">{{ item.user }}</div>
+                    <div class="col">{{ item.pinToWin }}</div>
+                </div>
+                <div class="row">
+                    <button class="btn-sortear" (click)="obtenerGanador()">
+                        Sortear
+                    </button>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-drawer-container>
+</ng-template>

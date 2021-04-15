@@ -3,168 +3,201 @@
     <div class="row text-center h-100">
         <div class="col h-100">
             <div class="paddin-contenido h-100">
-                <mat-tab-group class="h-100" headerPosition="below">
-                    <mat-tab label="1">
-                        <div class="fondoGris">
-                            <div>
-                                <img class="bgSmp" src="../../../assets/BGSMP.png" />
-                            </div>
-                            <div>
-                                <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
-                            </div>
-                            <p class="tex-principal"><b>Califica la información teórica que recibiste por parte del
-                                    Maestro
-                                    Parrillero</b>&nbsp;&nbsp;&nbsp;(técnicas de cocción, tipos y usos de asadores y
-                                combustibles, tips, control de
-                                temperaturas, etc).</p>
-                            <div class="fondo-calificacion1">
-                                <button class="calificacion" (click)="logAnswers(1, false, 1)">1</button>
-                                <button class="calificacion" (click)="logAnswers(1, false, 2)">2</button>
-                                <button class="calificacion" (click)="logAnswers(1, false, 3)">3</button>
-                                <button class="calificacion" (click)="logAnswers(1, false, 4)">4</button>
-                                <button class="calificacion" (click)="logAnswers(1, false, 5)">5</button>
-                            </div>
-                            <p class="tex-principal tex-margin"><b>Califica el método de enseñanza del Maestro
-                                    Parrillero</b>&nbsp;(manejo del grupo, indicaciones, seguimiento, etc).</p>
-                            <div class="fondo-calificacion2">
-                                <button class="calificacion" (click)="logAnswers(2, false, 1)">1</button>
-                                <button class="calificacion" (click)="logAnswers(2, false, 2)">2</button>
-                                <button class="calificacion" (click)="logAnswers(2, false, 3)">3</button>
-                                <button class="calificacion" (click)="logAnswers(2, false, 4)">4</button>
-                                <button class="calificacion" (click)="logAnswers(2, false, 5)">5</button>
-                            </div>
-                            <div class="relleno">.</div>
-                            <div class="logoCursoNegro">
-                                <img src="../../../assets/LogoCursoNgo.png" />
+                <ng-container *ngIf=" pinGenerado else respondiendoPreguntas">
+                    <body background="../../../assets/FondoAdmin.jpeg">
+                        <div class="container main-ctn h-90">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="paddin-contenido">
+                                        <div class="fondoGris">
+                                            <div>
+                                                <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                                            </div>
+                                            <div>
+                                                <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                                            </div>
+                                            <h2 class="titulo"> EL ganador es:</h2>
+                                            <div class="name-apariencia">
+                                                Uno
+                                            </div>
+                                            <div class="pin-apariencia">
+                                                Dos
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </mat-tab>
-                    <mat-tab label="2">
-                        <div class="fondoGris">
-                            <div>
-                                <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                    </body>
+                </ng-container>
+                <ng-template #respondiendoPreguntas>
+                    <mat-tab-group class="h-100" headerPosition="below">
+                        <mat-tab label="1">
+                            <div class="fondoGris">
+                                <div>
+                                    <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                                </div>
+                                <div>
+                                    <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                                </div>
+                                <p class="tex-principal"><b>Califica la información teórica que recibiste por parte del
+                                        Maestro
+                                        Parrillero</b>&nbsp;&nbsp;&nbsp;(técnicas de cocción, tipos y usos de asadores y
+                                    combustibles, tips, control de
+                                    temperaturas, etc).</p>
+                                <div class="fondo-calificacion1">
+                                    <button class="calificacion" (click)="logAnswers(1, false, 1)">1</button>
+                                    <button class="calificacion" (click)="logAnswers(1, false, 2)">2</button>
+                                    <button class="calificacion" (click)="logAnswers(1, false, 3)">3</button>
+                                    <button class="calificacion" (click)="logAnswers(1, false, 4)">4</button>
+                                    <button class="calificacion" (click)="logAnswers(1, false, 5)">5</button>
+                                </div>
+                                <p class="tex-principal tex-margin"><b>Califica el método de enseñanza del Maestro
+                                        Parrillero</b>&nbsp;(manejo del grupo, indicaciones, seguimiento, etc).</p>
+                                <div class="fondo-calificacion2">
+                                    <button class="calificacion" (click)="logAnswers(2, false, 1)">1</button>
+                                    <button class="calificacion" (click)="logAnswers(2, false, 2)">2</button>
+                                    <button class="calificacion" (click)="logAnswers(2, false, 3)">3</button>
+                                    <button class="calificacion" (click)="logAnswers(2, false, 4)">4</button>
+                                    <button class="calificacion" (click)="logAnswers(2, false, 5)">5</button>
+                                </div>
+                                <div class="relleno">.</div>
+                                <div class="logoCursoNegro">
+                                    <img src="../../../assets/LogoCursoNgo.png" />
+                                </div>
                             </div>
-                            <div>
-                                <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                        </mat-tab>
+                        <mat-tab label="2">
+                            <div class="fondoGris">
+                                <div>
+                                    <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                                </div>
+                                <div>
+                                    <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                                </div>
+                                <p class="tex-principal">Del 1 al 5: ¿Consideras que el Maestro Parrillero resolvió
+                                    todas
+                                    tus dudas?</p>
+                                <div class="fondo-calificacion1">
+                                    <button class="calificacion" (click)="logAnswers(3, false, 1)">1</button>
+                                    <button class="calificacion" (click)="logAnswers(3, false, 2)">2</button>
+                                    <button class="calificacion" (click)="logAnswers(3, false, 3)">3</button>
+                                    <button class="calificacion" (click)="logAnswers(3, false, 4)">4</button>
+                                    <button class="calificacion" (click)="logAnswers(3, false, 5)">5</button>
+                                </div>
+                                <p class="tex-principal tex-margin"><b>Califica la atención que recibiste por parte del
+                                        staff SMP </b>&nbsp;(líder de tienda, apoyos de cocina, aprendices,
+                                    coordinadores).
+                                </p>
+                                <div class="fondo-calificacion2">
+                                    <button class="calificacion" (click)="logAnswers(4, false, 1)">1</button>
+                                    <button class="calificacion" (click)="logAnswers(4, false, 2)">2</button>
+                                    <button class="calificacion" (click)="logAnswers(4, false, 3)">3</button>
+                                    <button class="calificacion" (click)="logAnswers(4, false, 4)">4</button>
+                                    <button class="calificacion" (click)="logAnswers(5, false, 5)">5</button>
+                                </div>
+                                <div class="relleno">.</div>
+                                <div class="logoCursoNegro">
+                                    <img src="../../../assets/LogoCursoNgo.png" />
+                                </div>
                             </div>
-                            <p class="tex-principal">Del 1 al 5: ¿Consideras que el Maestro Parrillero resolvió todas
-                                tus dudas?</p>
-                            <div class="fondo-calificacion1">
-                                <button class="calificacion" (click)="logAnswers(3, false, 1)">1</button>
-                                <button class="calificacion" (click)="logAnswers(3, false, 2)">2</button>
-                                <button class="calificacion" (click)="logAnswers(3, false, 3)">3</button>
-                                <button class="calificacion" (click)="logAnswers(3, false, 4)">4</button>
-                                <button class="calificacion" (click)="logAnswers(3, false, 5)">5</button>
+                        </mat-tab>
+                        <mat-tab label="3">
+                            <div class="fondoGris">
+                                <div>
+                                    <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                                </div>
+                                <div>
+                                    <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                                </div>
+                                <p class="tex-principal"> Califica sabor, tiempos de elaboración y presentación del menú
+                                    degustado en el curso.</p>
+                                <div class="fondo-calificacion1">
+                                    <button class="calificacion" (click)="logAnswers(5, false, 1)">1</button>
+                                    <button class="calificacion" (click)="logAnswers(5, false, 2)">2</button>
+                                    <button class="calificacion" (click)="logAnswers(5, false, 3)">3</button>
+                                    <button class="calificacion" (click)="logAnswers(5, false, 4)">4</button>
+                                    <button class="calificacion" (click)="logAnswers(5, false, 5)">5</button>
+                                </div>
+                                <p class="tex-principal tex-margin">Del 1 al 5, ¿consideras que el precio del curso es
+                                    justo
+                                    a la experiencia recibida por parte de la SMP? (precio vs calidad).</p>
+                                <div class="fondo-calificacion2">
+                                    <button class="calificacion" (click)="logAnswers(6, false, 1)">1</button>
+                                    <button class="calificacion" (click)="logAnswers(6, false, 2)">2</button>
+                                    <button class="calificacion" (click)="logAnswers(6, false, 3)">3</button>
+                                    <button class="calificacion" (click)="logAnswers(6, false, 4)">4</button>
+                                    <button class="calificacion" (click)="logAnswers(6, false, 5)">5</button>
+                                </div>
+                                <div class="relleno">.</div>
+                                <div class="logoCursoNegro">
+                                    <img src="../../../assets/LogoCursoNgo.png" />
+                                </div>
                             </div>
-                            <p class="tex-principal tex-margin"><b>Califica la atención que recibiste por parte del
-                                    staff SMP </b>&nbsp;(líder de tienda, apoyos de cocina, aprendices, coordinadores).
-                            </p>
-                            <div class="fondo-calificacion2">
-                                <button class="calificacion" (click)="logAnswers(4, false, 1)">1</button>
-                                <button class="calificacion" (click)="logAnswers(4, false, 2)">2</button>
-                                <button class="calificacion" (click)="logAnswers(4, false, 3)">3</button>
-                                <button class="calificacion" (click)="logAnswers(4, false, 4)">4</button>
-                                <button class="calificacion" (click)="logAnswers(5, false, 5)">5</button>
+                        </mat-tab>
+                        <mat-tab label="4">
+                            <div class="fondoGris">
+                                <div>
+                                    <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                                </div>
+                                <div>
+                                    <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                                </div>
+                                <p class="tex-principal">Califica las instalaciones del capítulo donde tomaste el curso.
+                                </p>
+                                <div class="fondo-calificacion1">
+                                    <button class="calificacion" (click)="logAnswers(7, true, 1)">1</button>
+                                    <button class="calificacion" (click)="logAnswers(7, true, 2)">2</button>
+                                    <button class="calificacion" (click)="logAnswers(7, true, 3)">3</button>
+                                    <button class="calificacion" (click)="logAnswers(7, true, 4)">4</button>
+                                    <button class="calificacion" (click)="logAnswers(7, true, 5)">5</button>
+                                </div>
+                                <div class="relleno">.</div>
+                                <div class="logoCursoNegro">
+                                    <img src="../../../assets/LogoCursoNgo.png" />
+                                </div>
                             </div>
-                            <div class="relleno">.</div>
-                            <div class="logoCursoNegro">
-                                <img src="../../../assets/LogoCursoNgo.png" />
-                            </div>
-                        </div>
-                    </mat-tab>
-                    <mat-tab label="3">
-                        <div class="fondoGris">
-                            <div>
-                                <img class="bgSmp" src="../../../assets/BGSMP.png" />
-                            </div>
-                            <div>
-                                <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
-                            </div>
-                            <p class="tex-principal"> Califica sabor, tiempos de elaboración y presentación del menú
-                                degustado en el curso.</p>
-                            <div class="fondo-calificacion1">
-                                <button class="calificacion" (click)="logAnswers(5, false, 1)">1</button>
-                                <button class="calificacion" (click)="logAnswers(5, false, 2)">2</button>
-                                <button class="calificacion" (click)="logAnswers(5, false, 3)">3</button>
-                                <button class="calificacion" (click)="logAnswers(5, false, 4)">4</button>
-                                <button class="calificacion" (click)="logAnswers(5, false, 5)">5</button>
-                            </div>
-                            <p class="tex-principal tex-margin">Del 1 al 5, ¿consideras que el precio del curso es justo
-                                a la experiencia recibida por parte de la SMP? (precio vs calidad).</p>
-                            <div class="fondo-calificacion2">
-                                <button class="calificacion" (click)="logAnswers(6, false, 1)">1</button>
-                                <button class="calificacion" (click)="logAnswers(6, false, 2)">2</button>
-                                <button class="calificacion" (click)="logAnswers(6, false, 3)">3</button>
-                                <button class="calificacion" (click)="logAnswers(6, false, 4)">4</button>
-                                <button class="calificacion" (click)="logAnswers(6, false, 5)">5</button>
-                            </div>
-                            <div class="relleno">.</div>
-                            <div class="logoCursoNegro">
-                                <img src="../../../assets/LogoCursoNgo.png" />
-                            </div>
-                        </div>
-                    </mat-tab>
-                    <mat-tab label="4">
-                        <div class="fondoGris">
-                            <div>
-                                <img class="bgSmp" src="../../../assets/BGSMP.png" />
-                            </div>
-                            <div>
-                                <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
-                            </div>
-                            <p class="tex-principal">Califica las instalaciones del capítulo donde tomaste el curso.</p>
-                            <div class="fondo-calificacion1">
-                                <button class="calificacion" (click)="logAnswers(7, true, 1)">1</button>
-                                <button class="calificacion" (click)="logAnswers(7, true, 2)">2</button>
-                                <button class="calificacion" (click)="logAnswers(7, true, 3)">3</button>
-                                <button class="calificacion" (click)="logAnswers(7, true, 4)">4</button>
-                                <button class="calificacion" (click)="logAnswers(7, true, 5)">5</button>
-                            </div>
-                            <div class="relleno">.</div>
-                            <div class="logoCursoNegro">
-                                <img src="../../../assets/LogoCursoNgo.png" />
-                            </div>
-                        </div>
-                    </mat-tab>
-                    <mat-tab label="5">
-                        <div class="fondoGris">
-                            <div>
-                                <img class="bgSmp" src="../../../assets/BGSMP.png" />
-                            </div>
-                            <div>
-                                <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
-                            </div>
-                            <p class="tex-principal">¿Qué comentario/sugerencia nos puedes dar para mejorar tu
-                                experiencia?</p>
-                            <textarea rows="4" cols="20" placeholder="Escribe aqui tu comentario"
-                                class="textArea"></textarea>
+                        </mat-tab>
+                        <mat-tab label="5">
+                            <div class="fondoGris">
+                                <div>
+                                    <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                                </div>
+                                <div>
+                                    <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                                </div>
+                                <p class="tex-principal">¿Qué comentario/sugerencia nos puedes dar para mejorar tu
+                                    experiencia?</p>
+                                <textarea rows="4" cols="20" placeholder="Escribe aqui tu comentario"
+                                    class="textArea"></textarea>
 
-                            <div class="relleno">.</div>
-                            <div class="logoCursoNegro">
-                                <img src="../../../assets/LogoCursoNgo.png" />
+                                <div class="relleno">.</div>
+                                <div class="logoCursoNegro">
+                                    <img src="../../../assets/LogoCursoNgo.png" />
+                                </div>
                             </div>
-                        </div>
-                    </mat-tab>
-                    <mat-tab label="6">
-                        <div class="fondoGris">
-                            <div>
-                                <img class="bgSmp" src="../../../assets/BGSMP.png" />
-                            </div>
-                            <div>
-                                <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
-                            </div>
-                            <p class="tex-principal">¿Alguna temática, receta o técnica que quiseras que tomemos en
-                                cuenta para futuros cursos?</p>
-                            <textarea rows="4" cols="20" placeholder="Escribe aqui tu comentario"
-                                class="textArea"></textarea>
+                        </mat-tab>
+                        <mat-tab label="6">
+                            <div class="fondoGris">
+                                <div>
+                                    <img class="bgSmp" src="../../../assets/BGSMP.png" />
+                                </div>
+                                <div>
+                                    <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
+                                </div>
+                                <p class="tex-principal">¿Alguna temática, receta o técnica que quiseras que tomemos en
+                                    cuenta para futuros cursos?</p>
+                                <textarea rows="4" cols="20" placeholder="Escribe aqui tu comentario"
+                                    class="textArea"></textarea>
 
-                            <div class="relleno">.</div>
-                            <div class="logoCursoNegro">
-                                <img src="../../../assets/LogoCursoNgo.png" />
+                                <div class="relleno">.</div>
+                                <div class="logoCursoNegro">
+                                    <img src="../../../assets/LogoCursoNgo.png" />
+                                </div>
                             </div>
-                        </div>
-                    </mat-tab>
-                </mat-tab-group>
+                        </mat-tab>
+                    </mat-tab-group>
+                </ng-template>
             </div>
         </div>
     </div>
