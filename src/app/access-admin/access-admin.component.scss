@@ -34,3 +34,32 @@
     width: 50%;
     border-radius: 15px; 
 }
+.inputs{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 50px;
+    border: 0px solid;
+    margin-top: -20px;
+}
+input::placeholder {
+    color:#ffffff;
+}
+.inputUsuario{
+    background-color: black;
+    font-weight: bold;
+    text-transform:none;
+    font-size: 15px;
+    font-family: system-ui;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.inputEmail{
+    background-color: black;
+    font-weight: bold;
+    text-transform:none;
+    font-size: 15px;
+    font-family: system-ui;
+    color: #ffffff;
+    text-transform: uppercase;
+}
