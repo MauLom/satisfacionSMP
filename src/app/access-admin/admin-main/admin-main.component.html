@@ -1,27 +1,25 @@
 <mat-drawer-container>
     <mat-drawer #drawer class="example-sidenav" mode="side">
-        <button (click)="goToGenerateSurvey()">
+        <button (click)="goToGenerateSurvey()" class="generate">
             Go to generate
         </button>
     </mat-drawer>
     <div class="example-sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
-            Esto debe ser el iconito para el menu
+        <button type="button" mat-button (click)="drawer.toggle()" class="sorteo">
+            <img src="../../../assets/Flama 1.png" />
+            <p>sorteo</p>
         </button>
     </div>
     <div>
-        Area Banner
+        <img src="../../../assets/LogoSMP.png" class="perfil" />
     </div>
     <mat-tab-group>
         <mat-tab label="Historial">
-            Historial
-            <div class="cont-historial" *ngFor = "let item of arrSurveys">
+            <p class="letra-historial">historial</p>
+            <div class="cont-historial" *ngFor="let item of arrSurveys">
                 <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
-               
+
             </div>
-            <button (click)="checkParticipantes()">
-                HazmeClick
-            </button>
         </mat-tab>
         <mat-tab label="Sorteos Activos">
             <div *ngFor="let item of surveys | async">

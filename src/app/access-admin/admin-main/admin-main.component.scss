@@ -39,6 +39,7 @@
 .perfil{
     max-width: 100px;
     margin-left: 40%;
+    margin-bottom: 6%;
 }
 .sorteo{
     margin-top: 25px;
@@ -63,4 +64,16 @@
 .met-tab{
     margin-left: 20%;
     background-color: #282828;
+}
+
+.letra-historial{
+    color: rgb(250, 250, 250);
+    transform: none;
+}
+.generate{
+    background-color: #C0272D;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 20px;
 }
