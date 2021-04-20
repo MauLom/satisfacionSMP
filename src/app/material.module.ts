@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   imports: [
     MatButtonModule,
@@ -18,7 +19,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     BrowserModule,
     MatTabsModule,
     MatSidenavModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatIconModule
   ],
   exports: [
     MatButtonModule,
@@ -29,7 +31,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     BrowserModule,
     MatTabsModule,
     MatSidenavModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }

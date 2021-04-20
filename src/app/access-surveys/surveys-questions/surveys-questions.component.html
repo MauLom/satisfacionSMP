@@ -34,7 +34,7 @@
                     </div>
                 </ng-container>
                 <ng-template #respondiendoPreguntas>
-                    <mat-tab-group class="h-100" headerPosition="below">
+                    <mat-tab-group [(selectedIndex)]="tabQuestionsIndex" class="h-100" headerPosition="below">
                         <mat-tab label="1">
                             <div class="fondoGris">
                                 <div>
@@ -48,21 +48,31 @@
                                         Parrillero</b>&nbsp;&nbsp;&nbsp;(técnicas de cocción, tipos y usos de asadores y
                                     combustibles, tips, control de
                                     temperaturas, etc).</p>
-                                <div class="fondo-calificacion1">
-                                    <button class="calificacion" (click)="logAnswers(1, false, 1)">1</button>
-                                    <button class="calificacion" (click)="logAnswers(1, false, 2)">2</button>
-                                    <button class="calificacion" (click)="logAnswers(1, false, 3)">3</button>
-                                    <button class="calificacion" (click)="logAnswers(1, false, 4)">4</button>
-                                    <button class="calificacion" (click)="logAnswers(1, false, 5)">5</button>
+                                <div class="fondo-calificacion1" [ngClass]="{'bg-grey': respArr.length > 0}">
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[0] == 1}"
+                                        (click)="logAnswers(1, false, 1, false)">1</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[0] == 2}"
+                                        (click)="logAnswers(1, false, 2, false)">2</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[0] == 3}"
+                                        (click)="logAnswers(1, false, 3, false)">3</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[0] == 4}"
+                                        (click)="logAnswers(1, false, 4, false)">4</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[0] == 5}"
+                                        (click)="logAnswers(1, false, 5,false)">5</button>
                                 </div>
                                 <p class="tex-principal tex-margin"><b>Califica el método de enseñanza del Maestro
                                         Parrillero</b>&nbsp;(manejo del grupo, indicaciones, seguimiento, etc).</p>
-                                <div class="fondo-calificacion2">
-                                    <button class="calificacion" (click)="logAnswers(2, false, 1)">1</button>
-                                    <button class="calificacion" (click)="logAnswers(2, false, 2)">2</button>
-                                    <button class="calificacion" (click)="logAnswers(2, false, 3)">3</button>
-                                    <button class="calificacion" (click)="logAnswers(2, false, 4)">4</button>
-                                    <button class="calificacion" (click)="logAnswers(2, false, 5)">5</button>
+                                <div class="fondo-calificacion2" [ngClass]="{'bg-grey': respArr.length > 1}">
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[1] == 1}"
+                                        (click)="logAnswers(2, false, 1, true)">1</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[1] == 2}"
+                                        (click)="logAnswers(2, false, 2, true)">2</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[1] == 3}"
+                                        (click)="logAnswers(2, false, 3, true)">3</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[1] == 4}"
+                                        (click)="logAnswers(2, false, 4,true)">4</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[1] == 5}"
+                                        (click)="logAnswers(2, false, 5,true)">5</button>
                                 </div>
                                 <div class="relleno">.</div>
                                 <div class="logoCursoNegro">
@@ -81,23 +91,33 @@
                                 <p class="tex-principal">Del 1 al 5: ¿Consideras que el Maestro Parrillero resolvió
                                     todas
                                     tus dudas?</p>
-                                <div class="fondo-calificacion1">
-                                    <button class="calificacion" (click)="logAnswers(3, false, 1)">1</button>
-                                    <button class="calificacion" (click)="logAnswers(3, false, 2)">2</button>
-                                    <button class="calificacion" (click)="logAnswers(3, false, 3)">3</button>
-                                    <button class="calificacion" (click)="logAnswers(3, false, 4)">4</button>
-                                    <button class="calificacion" (click)="logAnswers(3, false, 5)">5</button>
+                                <div class="fondo-calificacion1" [ngClass]="{'bg-grey': respArr.length > 2}">
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[2] == 1}"
+                                        (click)="logAnswers(3, false, 1, false)">1</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[2] == 2}"
+                                        (click)="logAnswers(3, false, 2, false)">2</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[2] == 3}"
+                                        (click)="logAnswers(3, false, 3, false)">3</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[2] == 4}"
+                                        (click)="logAnswers(3, false, 4, false)">4</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[2] == 5}"
+                                        (click)="logAnswers(3, false, 5, false)">5</button>
                                 </div>
                                 <p class="tex-principal tex-margin"><b>Califica la atención que recibiste por parte del
                                         staff SMP </b>&nbsp;(líder de tienda, apoyos de cocina, aprendices,
                                     coordinadores).
                                 </p>
-                                <div class="fondo-calificacion2">
-                                    <button class="calificacion" (click)="logAnswers(4, false, 1)">1</button>
-                                    <button class="calificacion" (click)="logAnswers(4, false, 2)">2</button>
-                                    <button class="calificacion" (click)="logAnswers(4, false, 3)">3</button>
-                                    <button class="calificacion" (click)="logAnswers(4, false, 4)">4</button>
-                                    <button class="calificacion" (click)="logAnswers(5, false, 5)">5</button>
+                                <div class="fondo-calificacion2" [ngClass]="{'bg-grey': respArr.length > 3}">
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[3] == 1}"
+                                        (click)="logAnswers(4, false, 1, true)">1</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[3] == 2}"
+                                        (click)="logAnswers(4, false, 2, true)">2</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[3] == 3}"
+                                        (click)="logAnswers(4, false, 3, true)">3</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[3] == 4}"
+                                        (click)="logAnswers(4, false, 4, true)">4</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[3] == 5}"
+                                        (click)="logAnswers(5, false, 5, true)">5</button>
                                 </div>
                                 <div class="relleno">.</div>
                                 <div class="logoCursoNegro">
@@ -115,22 +135,32 @@
                                 </div>
                                 <p class="tex-principal"> Califica sabor, tiempos de elaboración y presentación del menú
                                     degustado en el curso.</p>
-                                <div class="fondo-calificacion1">
-                                    <button class="calificacion" (click)="logAnswers(5, false, 1)">1</button>
-                                    <button class="calificacion" (click)="logAnswers(5, false, 2)">2</button>
-                                    <button class="calificacion" (click)="logAnswers(5, false, 3)">3</button>
-                                    <button class="calificacion" (click)="logAnswers(5, false, 4)">4</button>
-                                    <button class="calificacion" (click)="logAnswers(5, false, 5)">5</button>
+                                <div class="fondo-calificacion1" [ngClass]="{'bg-grey': respArr.length > 4}">
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[4] == 1}"
+                                        (click)="logAnswers(5, false, 1, false)">1</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[4] == 2}"
+                                        (click)="logAnswers(5, false, 2, false)">2</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[4] == 3}"
+                                        (click)="logAnswers(5, false, 3, false)">3</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[4] == 4}"
+                                        (click)="logAnswers(5, false, 4, false)">4</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[4] == 5}"
+                                        (click)="logAnswers(5, false, 5, false)">5</button>
                                 </div>
                                 <p class="tex-principal tex-margin">Del 1 al 5, ¿consideras que el precio del curso es
                                     justo
                                     a la experiencia recibida por parte de la SMP? (precio vs calidad).</p>
-                                <div class="fondo-calificacion2">
-                                    <button class="calificacion" (click)="logAnswers(6, false, 1)">1</button>
-                                    <button class="calificacion" (click)="logAnswers(6, false, 2)">2</button>
-                                    <button class="calificacion" (click)="logAnswers(6, false, 3)">3</button>
-                                    <button class="calificacion" (click)="logAnswers(6, false, 4)">4</button>
-                                    <button class="calificacion" (click)="logAnswers(6, false, 5)">5</button>
+                                <div class="fondo-calificacion2" [ngClass]="{'bg-grey': respArr.length > 5}">
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[5] == 1}"
+                                        (click)="logAnswers(6, false, 1, true)">1</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[5] == 2}"
+                                        (click)="logAnswers(6, false, 2, true)">2</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[5] == 3}"
+                                        (click)="logAnswers(6, false, 3, true)">3</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[5] == 4}"
+                                        (click)="logAnswers(6, false, 4, true)">4</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[5] == 5}"
+                                        (click)="logAnswers(6, false, 5, true)">5</button>
                                 </div>
                                 <div class="relleno">.</div>
                                 <div class="logoCursoNegro">
@@ -148,12 +178,17 @@
                                 </div>
                                 <p class="tex-principal">Califica las instalaciones del capítulo donde tomaste el curso.
                                 </p>
-                                <div class="fondo-calificacion1">
-                                    <button class="calificacion" (click)="logAnswers(7, true, 1)">1</button>
-                                    <button class="calificacion" (click)="logAnswers(7, true, 2)">2</button>
-                                    <button class="calificacion" (click)="logAnswers(7, true, 3)">3</button>
-                                    <button class="calificacion" (click)="logAnswers(7, true, 4)">4</button>
-                                    <button class="calificacion" (click)="logAnswers(7, true, 5)">5</button>
+                                <div class="fondo-calificacion1" [ngClass]="{'bg-grey': respArr.length > 6}">
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[6] == 1}"
+                                        (click)="logAnswers(7, false, 1, true)">1</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[6] == 2}"
+                                        (click)="logAnswers(7, false, 2, true)">2</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[6] == 3}"
+                                        (click)="logAnswers(7, false, 3, true)">3</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[6] == 4}"
+                                        (click)="logAnswers(7, false, 4, true)">4</button>
+                                    <button class="calificacion" [ngClass]="{'color-red': respArr[6] == 5}"
+                                        (click)="logAnswers(7, false, 5, true)">5</button>
                                 </div>
                                 <div class="relleno">.</div>
                                 <div class="logoCursoNegro">
@@ -200,6 +235,11 @@
                             </div>
                         </mat-tab>
                     </mat-tab-group>
+                    <button mat-icon-button (click)="logQuestions()">
+                        <mat-icon [ngClass]="{'color-red': tabQuestionsIndex > 3}">
+                            arrow_forward_ios
+                        </mat-icon>
+                    </button>
                 </ng-template>
             </div>
         </div>
