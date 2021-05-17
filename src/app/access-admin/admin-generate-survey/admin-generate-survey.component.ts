@@ -25,12 +25,14 @@ export class AdminGenerateSurveyComponent implements OnInit {
 
     let getInfo = this.db.database.ref('capitulos/').once('value').then(
       snapshot => {
+        console.log("Arr Capitulos",  snapshot.val());
         this.arrCapitulos = snapshot.val()
       }
     )
 
     let getInfo2 = this.db.database.ref('maestrosParrilleros/').once('value').then(
       snapshot => {
+        console.log("Arr Maestros",  snapshot.val());
         this.arrMaestros = snapshot.val()
       }
     )

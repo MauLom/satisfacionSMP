@@ -3,36 +3,34 @@
     position: absolute;
 
     .admin-access-ref{
-        font-size: 16px;
-        font-weight: 600;
-        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        color: #BDBDBD;
         text-decoration: underline;
         text-transform: uppercase;
         margin-top:15%
     }
-    .margin-admin{
-        margin-top: 35px !important;
-        margin-left: 65px !important;
-    }
+  
 
     .btn-main{
         font-size: 36px;
         font-weight: 800;
-        min-height: 150px;
-        margin-bottom: 2%;
+        
     }
 }
 .sorteo-buttom{
-    background-color: #c0272d;
+    background-color: #AD252B;
     color: #ffffff;
     border-radius: 10px;
     width: 250px;
 }
 .tex-buttom1{
-    font-family:Zilla Slab;
-    font-weight: bold;
-    font-size: 35px;
-    margin-top: 15px;
+    font-family:Montserrat;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 12px;
 }
 .tex-buttom2{
     font-family:Zilla Slab;
@@ -46,8 +44,8 @@
 }
 .mainLogoCursos{
     margin-bottom: 10%;
-    max-width: 150px;
-    max-height: 300px;
+    max-width: 197px;
+    max-height: 188px;
 }
 .mainLogoSmp{
     max-width: 70px;

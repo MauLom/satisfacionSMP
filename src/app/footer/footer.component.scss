@@ -1,20 +1,21 @@
+
 .footer-cntn{
+    width: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    position: absolute;
+    bottom: 0;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
     background-color: #282828;
     color: #fff;
-    width: 110%;
-    margin-left: -15px;
     height: 60px;
 }
 .logo{
     width: 50%;
 }
-.nose{
-    max-width: 100%;
-    background-color: #282828;
-}
+
 .terminosYPrivacidad{
     color: #f1f1f1;
 }

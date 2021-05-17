@@ -48,13 +48,37 @@ export class SurveysQuestionsComponent implements OnInit {
           this.pinParticipante = randomPin;
           this.pinGenerado = true;
         })
-    }else{
+    } else {
       this.goNextTab()
     }
   }
 
   goNextTab() {
     this.tabQuestionsIndex = (this.tabQuestionsIndex + 1);
+  }
+
+
+  guardarRespuestas(valuacion: number) {
+    let numeroPreguntas = 8;
+
+    let userName = "";
+    if (this.respArr.length < numeroPreguntas) {
+      this.respArr.push(valuacion);
+      this.goNextTab();
+    } else {
+      let randomPin = Math.floor((Math.random() * (999 - 10 + 1)) + 10);;
+      let getInfo = this.db.database.ref('users/' + this.claveUser).once('value').then(
+        snapshot => {
+          userName = snapshot.val().nombre + ' ' + snapshot.val().apellido;
+          this.db.database.ref('survey/' + this.claveSurvey + '/answers/' + this.claveUser).set({
+            user: userName,
+            responses: this.respArr,
+            pinToWin: randomPin
+          })
+          this.pinParticipante = randomPin;
+          this.pinGenerado = true;
+        })
+    }
   }
 
   logAnswers(idxAnswer: number, doLog: boolean, clasificacion: number, goNext: boolean) {
