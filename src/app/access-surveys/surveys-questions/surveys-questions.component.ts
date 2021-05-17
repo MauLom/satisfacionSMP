@@ -12,7 +12,12 @@ export class SurveysQuestionsComponent implements OnInit {
   claveSurvey: Number = 0;
   claveUser: Number = 0;
 
-  respArr: Array<Number> = []
+  respArr: Array<any> = []
+  numeroPreguntas = 9;
+
+  textoPregunta6 = "";
+  textoPregunta7 = "";
+
 
   pinGenerado: boolean = false;
 
@@ -30,11 +35,39 @@ export class SurveysQuestionsComponent implements OnInit {
         this.claveSurvey = params['clave'];
         this.claveUser = params['userId']
       })
+    for (let i = 0; i < this.numeroPreguntas; i++) {
+      this.respArr.push({ hasAnswer: false, value: 0, index: i })
+    }
   }
+
+  saveAnswers(indice: number, valuacion: any, goNext?: boolean, doLog?: boolean) {
+    this.respArr[indice].value = valuacion;
+    this.respArr[indice].hasAnswer = true;
+    if (goNext) {
+      this.goNextTab();
+
+    }
+    if (doLog) {
+      let userName = "";
+      let randomPin = Math.floor((Math.random() * (999 - 10 + 1)) + 10);;
+      let getInfo = this.db.database.ref('users/' + this.claveUser).once('value').then(
+        snapshot => {
+          userName = snapshot.val().nombre + ' ' + snapshot.val().apellido;
+          this.db.database.ref('survey/' + this.claveSurvey + '/answers/' + this.claveUser).set({
+            user: userName,
+            responses: this.respArr,
+            pinToWin: randomPin
+          })
+          this.pinParticipante = randomPin;
+          this.pinGenerado = true;
+        })
+
+    }
+  }
+
 
   logQuestions() {
     let userName = "";
-    console.log("alo", this.tabQuestionsIndex)
     if (this.tabQuestionsIndex >= 5) {
       let randomPin = Math.floor((Math.random() * (999 - 10 + 1)) + 10);;
       let getInfo = this.db.database.ref('users/' + this.claveUser).once('value').then(
