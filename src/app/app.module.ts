@@ -27,7 +27,7 @@ import { AdminGenerateSurveyComponent } from './access-admin/admin-generate-surv
     AccessSurveysComponent,
     SurveysMainComponent,
     SurveysQuestionsComponent,
-    FooterComponent
+    FooterComponent,
     
   ],
   imports: [
