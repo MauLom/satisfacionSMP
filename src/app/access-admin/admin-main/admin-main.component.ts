@@ -39,49 +39,10 @@ export class AdminMainComponent implements OnInit {
         this.objBase = (snapshot.val())['1690'];
       }
     )
-
-    // this.db.database.ref('survey/').orderByKey().on('child_added', snapshot => {
-    //   this.logParticipantes = snapshot.val()?.answers;
-    // })
-
   }
 
   goToGenerateSurvey() {
     this.router.navigate(["/admingsurvey"]);
-  }
-
-  obtenerPromedio() {
-    this.arrSurveys?.forEach(
-      element => {
-        let idRespuestas: Array<any> = [];
-        let getDetailEachSurveyAnswers = this.db.database.ref('survey/' + element[0] + '/answers').once('value').then(
-          snapshot => {
-            console.log("snapshot", snapshot.val())
-            Object.entries(snapshot.val())?.forEach(
-              each => {
-                idRespuestas.push(each[0])
-              })
-            let promedios: Array<number> = []
-            idRespuestas.forEach(cadaUno => {
-              console.log("Cada Uno", cadaUno)
-              let idxPromedios: number = 0;
-              let arrAuxSetRespuestas: Array<number> = snapshot.val()[cadaUno].responses;
-              arrAuxSetRespuestas.forEach(cadaRespuestaUsuario => {
-                if (idxPromedios == 0) {
-                  promedios.push(Number.parseInt(cadaRespuestaUsuario.toString()));
-
-                } else {
-                  // promedios[idxPromedios] = promedios[idxPromedios]+cadaRespuestaUsuario;
-                }
-                idxPromedios++;
-              })
-            })
-            console.log("Arr con promedios :", promedios);
-          })
-
-        /*Para saber el 100% de la respuesta, debo  multiplicar el maxClasificacion por el numero de participantes */
-        /* */
-      })
   }
 
   obtenerGanador() {
@@ -95,6 +56,11 @@ export class AdminMainComponent implements OnInit {
         let randomParticipant = Math.floor((Math.random() * (idParticipantes.length - 0 + 0)) + 0);;
         this.nameGanador = snapshot.val()[idParticipantes[randomParticipant]].user;
         this.pinGanador = snapshot.val()[idParticipantes[randomParticipant]].pinToWin;
+        this.db.database.ref('survey/' +  this.surveyDetalle).update({
+          status: 0,
+          winner: this.pinGanador,
+          endDate: new Date()
+        });
         this.showGanador = true;
       })
   }

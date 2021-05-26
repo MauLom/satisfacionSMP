@@ -39,6 +39,7 @@ export class AdminGenerateSurveyComponent implements OnInit {
   generarPin() {
     let randomId = Math.floor((Math.random() * (99999 - 10000 + 1)) + 1000);
     this.db.database.ref('survey/' + randomId).set({
+      noParticipantes: 0,
       maestro: this.slctdMaestro,
       capitulo: this.slctdCapitulo,
       fecha: this.slctdDate,
