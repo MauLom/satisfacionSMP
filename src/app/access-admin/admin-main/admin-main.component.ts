@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class AdminMainComponent implements OnInit {
 
   objBase: Object | undefined;
-  arrSurveys: Array<any> | undefined;
+  arrSurveys: Array<any> = [];
   logParticipantes: Object | undefined;
   surveys: Observable<any[]> | undefined;
   showGanador: boolean = false;
@@ -35,7 +35,7 @@ export class AdminMainComponent implements OnInit {
             this.arrSurveys?.push(cadaSorteoEnBD)
           }
         })
-        this.arrSurveys = Object.entries(snapshot.val());
+        //this.arrSurveys = Object.entries(snapshot.val());
         this.objBase = (snapshot.val())['1690'];
       }
     )
