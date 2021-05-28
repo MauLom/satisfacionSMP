@@ -35,7 +35,6 @@ export class AdminMainComponent implements OnInit {
             this.arrSurveys?.push(cadaSorteoEnBD)
           }
         })
-        //this.arrSurveys = Object.entries(snapshot.val());
         this.objBase = (snapshot.val())['1690'];
       }
     )
