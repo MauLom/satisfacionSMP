@@ -1,31 +1,31 @@
-<div class="container main-ctn h-90">
-    <div class="row text-center">
-        <div class="col">
-            <div class="paddin-contenido">
-                <div>
-                    <img class="mainLogoCursos" src="../../assets/logoCursos.png" />
-                    <div class="row text-center">
-                        <div class="col mt-4 mb-4">
-                            <button class="btn-main  sorteo-buttom" mat-raised-button (click)="goToSurveys()">
-                                <p class="tex-buttom1">Participar</p>
-                            </button>
-                            <img class="iconFlama" src="../../assets/Flama 1.png" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col" class="text-center">
-                    <a routerLink="/admin" class="admin-access-ref">
-                        Iniciar sesion
-                    </a>
-                </div>
-            </div>
+<div class="main-ctn ">
+    <div class="row justify-content-center">
+        <img class="mainLogoCursos mt-5" src="../../assets/logoCursos.png" />
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="txt-bienvenido">¡Bienvenido!</p>
         </div>
-
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="txt-brief-bienvenida">Estás en la plataforma de sorteos de la Sociedad Mexicana de Parrilleros</p>
+        </div>
+    </div>
+    <div class="row justify-content-center ">
+        <div class="col text-center">
+            <button class="btn-main sorteo-buttom mt-3" mat-raised-button (click)="goToSurveys()">
+                <p class="tex-buttom1">Participar</p>
+            </button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col" class="text-center mt-5">
+            <a routerLink="/admin" class="admin-access-ref">
+                Iniciar sesion
+            </a>
+        </div>
     </div>
 </div>
-
 <app-footer>
 </app-footer>

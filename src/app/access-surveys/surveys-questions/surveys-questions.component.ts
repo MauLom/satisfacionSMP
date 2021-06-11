@@ -13,11 +13,75 @@ export class SurveysQuestionsComponent implements OnInit {
   claveUser: Number = 0;
   respArr: Array<any> = []
   numeroPreguntas = 9;
-  textoPregunta6 = "";
-  textoPregunta7 = "";
+  pregSlctIdx: number | undefined;
+  pregSlctTipo: any | undefined;
+  pregSlctTxt: String | undefined;
   pinGenerado: boolean = false;
   pinParticipante: number = 0;
   tabQuestionsIndex: number = 0;
+
+  arrValuaciones: Array<any> = [
+    {
+      valor:"1",
+      slctd: false
+    },
+    {
+      valor:"2",
+      slctd: true
+    },
+    {
+      valor:"3",
+      slctd: false
+    },
+    {
+      valor:"4",
+      slctd: false
+    },
+    {
+      valor:"5",
+      slctd: false
+    },
+  ];
+
+  arrPreguntas: Array<any> = [
+    {
+      preg:"<b>Califica la información teórica que recibiste por parte del Maestro Parrillero</b>(Técnicas de cocción, tipos y usos de asadores y combustibles, tips, control de   temperaturas, etc).",
+      tipo: 1
+    },
+    {
+      preg:"Califica el método de enseñanza del Maestro Parrillero(manejo del grupo, indicaciones, seguimiento, etc).",
+      tipo: 1
+    },
+    {
+      preg:"Del 1 al 5: ¿Consideras que el Maestro Parrillero resolvió todas tus dudas?",
+      tipo: 1
+    },
+    {
+      preg:"Califica la atención que recibiste por parte del staff SMP </b>&nbsp;(líder de tienda, apoyos de cocina, aprendices, coordinadores).",
+      tipo: 1
+    },
+    {
+      preg:"Califica sabor, tiempos de elaboración y presentación del menú degustado en el curso",
+      tipo: 1
+    },
+    {
+      preg:"Del 1 al 5, ¿consideras que el precio del curso es justo a la experiencia recibida por parte de la SMP? (precio vs calidad).",
+      tipo: 1
+    },
+    {
+      preg:"Califica las instalaciones del capítulo donde tomaste el curso.",
+      tipo: 1
+    },
+    {
+      preg:"¿Qué comentario/sugerencia nos puedes dar para mejorar tu experiencia?",
+      tipo: 2
+    },
+    {
+      preg:"¿Alguna temática, receta o técnica que quiseras que tomemos en cuenta para futuros cursos?",
+      tipo: 2
+    }
+  ];
+
   constructor(
     private route: ActivatedRoute,
     private db: AngularFireDatabase,
@@ -32,6 +96,8 @@ export class SurveysQuestionsComponent implements OnInit {
     for (let i = 0; i < this.numeroPreguntas; i++) {
       this.respArr.push({ hasAnswer: false, value: 0, index: i })
     }
+
+    this.avanzarPregunta(0)
   }
 
   saveAnswers(indice: number, valuacion: any, goNext?: boolean, doLog?: boolean) {
@@ -68,6 +134,14 @@ export class SurveysQuestionsComponent implements OnInit {
 
   goNextTab() {
     this.tabQuestionsIndex = (this.tabQuestionsIndex + 1);
+  }
+
+  avanzarPregunta(idx: number) {
+
+    this.pregSlctIdx = idx;
+    this.pregSlctTipo = this.arrPreguntas[0].tipo;
+    this.pregSlctTxt = this.arrPreguntas[0].preg;
+
   }
 
 }

@@ -1,42 +1,31 @@
-<body background="../../assets/FondoSurvey.jpeg"></body>
-<div class="container main-ctn h-90">
-    <div class="row text-center">
-        <div class="paddin-contenido">
-            <div class="fondoGris">
-                <div class="col">
-                    <div class="paddin-contenido">
-                        <div>
-                            <img class="bgSmp" src="../../../assets/BGSMP.png" />
-                        </div>
-                        <div>
-                            <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
-                        </div>
-                        <img class="mainLogoCursos" src="../../assets/LogoCursosBlanco.png" />
-
-                        <div class="row text-center">
-                            <div class="col">
-                                <form class="form-field-cnt">
-                                    <input placeholder="Codigo" [(ngModel)]="claveId" name="claveId" type="text"
-                                        class="mt-2 mb-1 inpt-main inputPin">
-                                </form>
-                            </div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col">
-                                <button class="mt-2 btn-main ingresarButtom" mat-raised-button
-                                    (click)="goToSurveysMain()">
-                                    Ingresar
-                                </button>
-                            </div>
-                            <div class="relleno">.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container main-ctn">
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <img class="mainLogoCursos mt-5" src="../../assets/logoCursos.png" />
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <form class="form-field-cnt">
+                <input placeholder="Codigo" [(ngModel)]="claveId" name="claveId" type="text"
+                    class="mt-2 inpt-main inputCodigo">
+            </form>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-12 text-center">
+            <button class="btn-main ingresarButtom" mat-raised-button (click)="goToSurveysMain()">
+                INGRESAR
+            </button>
         </div>
     </div>
     <div class="row">
-        <app-footer>
-        </app-footer>
+        <div class="col-12 text-center mt-5">
+            <a routerLink="/" class="admin-access-ref">
+                Salir
+            </a>
+        </div>
     </div>
 </div>
+<app-footer>
+</app-footer>

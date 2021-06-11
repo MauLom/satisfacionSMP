@@ -6,12 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
-
-.h-90{
-    height: 90%;
-}
 .main-logo {
-    margin-bottom: 10%;
     max-width: 250px;
     max-height: 300px;
 }
@@ -36,8 +31,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border: 0px solid #d3d3d3;
 }
 
+.mainLogoCursos {
+    margin-bottom: 10%;
+    max-width: 197px;
+    max-height: 188px;
+}
+
 input{
     font-size: 24;
     text-align: center;
     text-transform: uppercase;
+}
+.h-33{
+    height: 33%;
+}
+.h-40{
+    height: 40%;
 }

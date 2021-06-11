@@ -1,69 +1,39 @@
-<body background="../../../assets/FondoSurvey.jpeg"></body>
-<div class="container main-cnt h-90">
-    <div class="row text-center">
-        <div class="paddin-contenido">
-            <div class="fondoGris">
-                <div class="col">
-                    <div>
-                        <img class="bgSmp" src="../../../assets/BGSMP.png" />
-                    </div>
-                    <div>
-                        <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
-                    </div>
-                    <img class="main-logo" src="../../../assets/LogoCursosBlanco.png" />
-                    <ng-container *ngIf="claveEncontrada else idNotFound">
-                        <div class="row text-center">
-                            <div class="col">
-                                <div class="col mb-2">
-                                    <form class="form-field-cnt inputs">
-                                        <div class="marginButom1">
-                                            <input placeholder="Nombre" class="mt-2 mb-1 inpt-main inputNombre"
-                                                name="name" type="text" [(ngModel)]="userNameInpt">
-                                        </div>
-                                        <div class="marginButom2">
-                                            <input placeholder="Apellido" class="mb-1 inpt-main inputApellido"
-                                                name="name" type="text" [(ngModel)]="userSurNameInpt">
-                                        </div>
-                                        <div class="marginButom2">
-                                            <input placeholder="Email" class="inpt-main inputEmail" name="email"
-                                                type="email" [(ngModel)]="userEmailInpt">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col">
-                                <button class="mt-2 btn-main ingresarButom" mat-raised-button
-                                    (click)="writeUserData(userNameInpt, userSurNameInpt,userEmailInpt)">
-                                    Ingresar
-                                </button>
-                            </div>
-                            <div class="relleno">.</div>
-                        </div>
-                    </ng-container>
-                </div>
+<div class="container main-ctn">
+    <div class="row justify-content-center">
+        <img class="mainLogoCursos mt-5" src="../../assets/logoCursos.png" />
+    </div>
+    <form>
+        <div class="row mb-2">
+            <div class="col-12 text-center">
+                <input placeholder="Nombre" class="inpt-main" name="name" type="text" [(ngModel)]="userNameInpt">
             </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-12 text-center">
+                <input placeholder="Apellido" class="inpt-main" name="name" type="text" [(ngModel)]="userSurNameInpt">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-12 text-center">
+                <input placeholder="Email" class="inpt-main" name="email" type="email" [(ngModel)]="userEmailInpt">
+            </div>
+        </div>
+    </form>
+    <div class="row mt-1">
+        <div class="col-12 text-center">
+            <button class="btn-main ingresarButtom" mat-raised-button
+                (click)="writeUserData(userNameInpt, userSurNameInpt,userEmailInpt)">
+                INGRESAR
+            </button>
         </div>
     </div>
-
-    <ng-template #idNotFound>
-        <div class="row text-center">
-            <div class="col">
-                <p>
-                    No conseguimos la clave que suministrate, por favor vuelve a intentar
-                </p>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col">
-                <button class="mt-4 btn-main" mat-raised-button (click)="goToSurveys()">
-                    Regresar
-                </button>
-            </div>
-        </div>
-    </ng-template>
     <div class="row">
-        <app-footer class="footer"> 
-        </app-footer>
+        <div class="col-12 text-center mt-3">
+            <a routerLink="/" class="admin-access-ref">
+                Regresar
+            </a>
+        </div>
     </div>
+</div>
+<app-footer>
+</app-footer>

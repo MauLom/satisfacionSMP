@@ -1,76 +1,51 @@
 .main-ctn {
-    top: 10%;
-    position: absolute;
-
-    .form-field-cnt{
+    height: calc(100% - 80px);
+    .form-field-cnt {
         margin-bottom: 10px;
     }
-    .title-surveys{
+    .title-surveys {
         font-size: 28px;
         font-weight: 600;
     }
-    .sub-title-surveys{
+    .sub-title-surveys {
         font-size: 14px;
         color: #666666;
     }
 }
-.fondoGris{
-    background-color: rgba(40, 40, 40, 0.6);
-    border-radius: 10px;
-}
-.mainLogoCursos{
-    margin-bottom: 10%;
-    max-width: 150px;
-    max-height: 300px;
-}
-.mainLogoSmp{
-    max-width: 70px;
-    margin-bottom: 35px;
-    z-index: 1;
-    margin-top: -110px;
-}
-.iconFlama{
-    max-width: 35px;
-    max-height: 35px;
-    display: flex;
-    margin-left: 145px;
-    margin-top: 20px;
-}
-.paddin-contenido{
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.ingresarButtom{
-    background-color: #c0272d;
-    color:#ffffff;
-    font-size: 24px;
+.admin-access-ref {
+    font-size: 18px;
     font-weight: 700;
-    min-height: 60px;
-    width: 60%;
-    border-radius: 15px; 
+    color: #bdbdbd;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
-.inputPin{
-    background-color: black;
+.ingresarButtom {
+    background-color: #ad252b;
     font-weight: bold;
-    text-transform:none;
-    font-size: 20px;
+    text-transform: none;
+    font-size: 30px;
     font-family: system-ui;
-    max-width: 250px;
     color: #ffffff;
+    font-family: Montserrat;
+    height: 60px;
 }
-.fondoGris2{
-    background-color: rgba(40, 40, 40, 0.6);
+.inputCodigo {
+    color: #b3b3b3;
+    background: #f3f3f3;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 90%;
+    height: 60px;
 }
-.bgSmp{
-    z-index: -1;
-}
-input::placeholder {
-    color:#ffffff;
-}
-.relleno{
-    margin-top: 60px;
-}
-.footer{
-    width: 145% !important;
-    margin-top: 120px !important;
+input::-webkit-input-placeholder {
+    color: #b3b3b3;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }

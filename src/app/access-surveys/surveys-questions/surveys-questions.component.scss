@@ -1,218 +1,45 @@
-::ng-deep .mat-tab-header {
-    color: #000000;
-    align-self: center;
-    .mat-tab-header {
-        color: #c0272d !important;
-    }
-    .mat-tab-header-pagination {
-        color: #c0272d !important;
-    }
-    .mat-tab-label-container {
-        background-color: #282828;
-    }
-    .mat-tab-label {
-        min-width: 20px !important;
-        max-width: 20px !important;
-        padding: 0px !important;
-    }
-    .mat-tab-label-active {
-        .mat-tab-label-content {
-            color: white !important;
-        }
-    }
+.cntSurveys {
+    height: calc(100% - 80px);
 }
-::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
-.mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: #282828;
-    height: 0px;
+
+.logoSurveys {
+    max-width: 129px;
+    max-height: 123px;
 }
-.main-ctn {
-    top: 0%;
-    position: absolute;
+.bg-logo {
+    background-image: linear-gradient(180deg, #ffffff 0, #ffffff 25%, #ffffff 50%, #ffffff 75%, #bdbdbd 150%);
 }
-.fondoGris {
-    background-color: #f1f1f1;
-    z-index: -1;
-    border-radius: 10px;
+.contenedor-txt {
+    padding: 10%;
 }
-.paddin-contenido {
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.bgSmp {
-    z-index: -1;
-}
-.mainLogoSmp {
-    max-width: 70px;
-    margin-bottom: 35px;
-    z-index: 1;
-    margin-top: -110px;
-}
-.tex-principal {
-    text-align: justify;
-    font-weight: 350px;
-    font-family: inherit;
-    font-size: 14px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.tex-margin {
-    margin-top: 50px;
-}
-.paddin-contenido {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.calificacion {
-    border: none;
-    font-size: 16px;
-    font-weight: 900;
-    margin-right: 15px;
-    color: #ffff;
-    background: none;
-}
-.fondo-calificacion1 {
-    background-color: black;
-    padding: 1px;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 50px;
-    margin-top: 15px;
+.cnt-logo {
+    display: flex;
+    align-items: center;
     text-align: center;
+    justify-content: center;
 }
-.fondo-calificacion2 {
-    background-color: black;
-    padding: 1px;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 50px;
-    margin-top: 15px;
-    text-align: center;
+.txtPreg {
+    line-height: 27px;
+    font-size: 17px;
 }
-.relleno {
-    margin-top: 35px;
+.barra {
+    background-color: #aaaaaa;
+    border-radius: 2px;
+    height: 6px;
+    max-width: 90%;
+    margin-left: 5%;
 }
-.logoCursoNegro {
-    margin-top: -35px;
-}
-.textArea {
-    width: 95%;
-    height: 150px;
-    border: none;
-    text-align: center;
-}
-.footer {
-    margin-top: -50px !important;
-}
-.main-ctn {
-    top: 10%;
-    position: absolute;
-}
-.fondoGris {
-    background-color: #f1f1f1;
-    z-index: -1;
-    border-radius: 10px;
-}
-.paddin-contenido {
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.bgSmp {
-    z-index: -1;
-}
-.mainLogoSmp {
-    max-width: 70px;
-    margin-bottom: 35px;
-    z-index: 1;
-    margin-top: -110px;
-}
-.pinButtom {
+.circles {
+    margin-top: -10px;
     color: #c0272d;
-    font-size: 24px;
-    font-weight: 700;
-    min-height: 60px;
-    width: 50%;
-    border-radius: 15px;
-    margin-left: 25%;
+    display: block;
 }
-.inputs {
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    min-height: 50px;
-    border: 0px solid;
-    margin-top: -20px;
+.numbersUnSelected {
+    color: #aaaaaa;
 }
-.inputCap {
-    background-color: #ffffff;
-    font-weight: bold;
-    text-transform: none;
-    font-size: 15px;
-    font-family: system-ui;
-    color: black;
-    text-transform: uppercase;
-    border-radius: 10px;
-    width: 93%;
-    padding: 8px;
-    margin-bottom: 25px;
-    border: none;
+::ng-deep .mat-icon{
+   
+        height: 50px !important;
+        width: 50px !important;
 }
-.inputMae {
-    background-color: #ffffff;
-    font-weight: bold;
-    text-transform: none;
-    font-size: 15px;
-    font-family: system-ui;
-    color: black;
-    text-transform: uppercase;
-    border-radius: 10px;
-    width: 93%;
-    padding: 8px;
-    margin-bottom: 25px;
-    border: none;
-}
-.inputFecha {
-    background-color: #ffffff;
-    font-weight: bold;
-    text-transform: none;
-    font-size: 15px;
-    font-family: system-ui;
-    color: black;
-    text-transform: uppercase;
-    border-radius: 10px;
-    width: 93%;
-    padding: 8px;
-    margin-bottom: 25px;
-    border: none;
-}
-.pinSorteo {
-    font-size: 30px;
-    font-weight: 700;
-    color: #c0272d;
-}
-.titulo {
-    text-transform: uppercase;
-    color: #c0272d;
-    font-weight: 900;
-    font-size: 25px;
-}
-.aviso {
-    text-align: justify;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 30px;
-    font-family: "Roboto";
-}
-.paddin-contenido2 {
-    padding-right: 25px;
-    margin-right: 15%;
-}
-.bg-grey {
-    background-color: grey;
-}
-.color-red {
-    color: #c0272d !important;
-}
-.color-white {
-    color: white !important;
-}
+
