@@ -156,7 +156,7 @@
                                     <button class="calificacion" [ngClass]="{'color-red': respArr[5].value == 4}"
                                         (click)="saveAnswers(5,4,true)">4</button>
                                     <button class="calificacion" [ngClass]="{'color-red': respArr[5].value == 5}"
-                                        (click)="saveAnswers(5,6,true)">5</button>
+                                        (click)="saveAnswers(5,5,true)">5</button>
                                 </div>
                                 <div class="relleno">.</div>
 
@@ -199,12 +199,11 @@
                                 <p class="tex-principal">¿Qué comentario/sugerencia nos puedes dar para mejorar tu
                                     experiencia?</p>
                                 <textarea rows="4" cols="20" placeholder="Escribe aqui tu comentario" class="textArea"
-                                    [ngModel]="textoPregunta6"></textarea>
+                                    [(ngModel)]="textoPregunta6"></textarea>
 
-                                <div class="relleno">.</div>
 
-                                <button mat-icon-button (click)="saveAnswers(7, textoPregunta6,true)">
-                                    <mat-icon [ngClass]="{'color-red': tabQuestionsIndex > 3}">
+                                <button mat-icon-button [disabled]="textoPregunta7 == ''" (click)="saveAnswers(7, textoPregunta6,true)">
+                                    <mat-icon [ngClass]="{'color-red': tabQuestionsIndex > 3 &&  textoPregunta6 != ''}">
                                         arrow_forward_ios
                                     </mat-icon>
                                 </button>
@@ -221,12 +220,11 @@
                                 <p class="tex-principal">¿Alguna temática, receta o técnica que quiseras que tomemos en
                                     cuenta para futuros cursos?</p>
                                 <textarea rows="4" cols="20" placeholder="Escribe aqui tu comentario" class="textArea"
-                                    [ngModel]="textoPregunta7"></textarea>
+                                    [(ngModel)]="textoPregunta7"></textarea>
 
-                                <div class="relleno">.</div>
 
-                                <button mat-icon-button (click)="saveAnswers(8, textoPregunta7,false, true)">
-                                    <mat-icon [ngClass]="{'color-red': tabQuestionsIndex > 3}">
+                                <button mat-icon-button [disabled]="textoPregunta7 == ''" (click)="saveAnswers(8, textoPregunta7,false, true)">
+                                    <mat-icon [ngClass]="{'color-red': tabQuestionsIndex > 3  && textoPregunta7 != ''}">
                                         arrow_forward_ios
                                     </mat-icon>
                                 </button>

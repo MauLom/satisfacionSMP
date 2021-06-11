@@ -35,6 +35,7 @@ export class SurveysQuestionsComponent implements OnInit {
   }
 
   saveAnswers(indice: number, valuacion: any, goNext?: boolean, doLog?: boolean) {
+    console.log("Texto pregunta ", this.textoPregunta6);
     this.respArr[indice].value = valuacion;
     this.respArr[indice].hasAnswer = true;
     if (goNext) {
