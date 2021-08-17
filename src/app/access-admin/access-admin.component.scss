@@ -63,3 +63,31 @@ input::placeholder {
     color: #ffffff;
     text-transform: uppercase;
 }
+.ingresarButtom {
+    background-color: #ad252b;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 30px;
+    font-family: system-ui;
+    color: #ffffff;
+    font-family: Montserrat;
+    height: 60px;
+}
+input::-webkit-input-placeholder {
+    color: #b3b3b3;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.admin-access-ref {
+    font-size: 18px;
+    font-weight: 700;
+    color: #bdbdbd;
+    text-decoration: underline;
+    text-transform: uppercase;
+}

@@ -29,39 +29,39 @@
     max-width: 90%;
     margin-left: 5%;
 }
-.circles {
-    margin-top: -10px;
-    color: #c0272d;
-    display: block;
+
+.txtHeadEnd {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
 }
-.numbersUnSelected {
-    color: #aaaaaa;
-}
-.inptResps {
-    width: 90%;
-    border: 0px;
-    border-bottom: 3px solid #ad252b;
-    text-transform: inherit;
-    text-align: left;
-}
-.btn-flecha {
-    background-color: #ad252b;
-}
-.finalizarBtn{
-    background-color: #AD252B;
-    font-size: 30px;
-    font-weight: 700;
+.txtHeadMid {
     font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ad252b;
 }
-.valSlctd{
-    color: #000000;
-    font-size: 20px;
-    font-weight: 800;
+.txtHeadBot {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
 }
-::ng-deep .mat-icon {
-    height: 50px !important;
-    width: 50px !important;
+.imgTicket{
+    width: 250px;
+    height: 120px;
 }
-::ng-deep .mat-mini-fab{
-    background-color: #AD252B;
+.numberOnTicket{
+    position: absolute;
+    margin-top: 12%;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF
 }

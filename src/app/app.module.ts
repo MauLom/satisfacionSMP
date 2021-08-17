@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SurveysQuestionsComponent } from './access-surveys/surveys-questions/surveys-questions.component';
 import { AdminMainComponent } from './access-admin/admin-main/admin-main.component';
 import { AdminGenerateSurveyComponent } from './access-admin/admin-generate-survey/admin-generate-survey.component';
+import { SurveysEndComponent } from './access-surveys/surveys-end/surveys-end.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AdminGenerateSurveyComponent } from './access-admin/admin-generate-surv
     AccessSurveysComponent,
     SurveysMainComponent,
     SurveysQuestionsComponent,
+    SurveysEndComponent,
     FooterComponent,
     
   ],

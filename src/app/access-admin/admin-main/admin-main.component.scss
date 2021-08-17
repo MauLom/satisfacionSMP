@@ -1,206 +1,394 @@
-::ng-deep .mat-tab-list {
-    background-color: #dadada;
-    text-align: -webkit-center;
-    border-bottom: 0px;
-    max-width: 60%;
-    margin-left: 20%;
-    border-radius: 20px;
-}
-::ng-deep .mat-tab-label-content {
-    color: white;
+.cntSurveys {
+    height: calc(100% - 100px);
 }
 
-::ng-deep .mat-tab-header {
-    border-bottom: 0px;
+.logoSurveys {
+    max-width: 110px;
+    max-height: 107px;
 }
-::ng-deep .mat-tab-label-active {
-    background-color: white;
-    border-radius: 20px;
-    .mat-tab-label-content {
-        color: #c0272d !important;
+.bg-logo {
+    background-color: #ad252b;
+}
+.contenedor-txt {
+    padding: 10%;
+}
+.cnt-logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.infoTxtSpace {
+    align-self: center;
+}
+.txtNombre {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+}
+.txtPuesto {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+}
+.btnMenuCnt {
+    align-self: self-start;
+}
+.opcionesMenu {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #c0272d;
+}
+.spacer {
+    height: 2px;
+    width: 146px;
+    left: 22px;
+    top: 140px;
+    border-radius: 1px;
+    color: #ececec;
+    border: 1px solid;
+}
+.sidenav {
+    width: 40%;
+}
+
+.cabeceraSeccion {
+    text-align: center;
+
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.185em;
+    text-align: center;
+    color: #c0272d;
+}
+
+.cntGraficas {
+    width: 100%;
+}
+.principalContainer{
+
+}
+
+::ng-deep {
+    .mat-tab-body {
+        text-align: -webkit-right;
+    }
+    .mat-tab-list {
+        display: none;
     }
 }
-::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
-.mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: #dadada;
-    height: 0px;
+
+// BARs CSS
+
+.Count:after {
+    content: "%";
 }
 
-::ng-deep .mat-progress-bar {
-    height: 10px !important;
-}
-.tab-style {
-    border: 1px solid black;
-    border-radius: 150px;
-}
-.fondoGris {
-    background-color: gray;
-}
-.perfil {
-    max-width: 100px;
-    margin-left: 40%;
-    margin-bottom: 6%;
-}
-.sorteo {
-    margin-top: 25px;
-    margin-left: 15px;
-    color: #c0272d;
-}
-.usuario {
-    background-color: #282828;
-    color: #f1f1f1;
-    width: 70%;
-    height: 50px;
-    text-align: center;
-    border-radius: 15px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 20px;
-    font-family: "Roboto";
-    margin-left: 18%;
-    margin-top: 25px;
-    padding: 15px;
-}
-.met-tab {
-    margin-left: 20%;
-    background-color: #282828;
-}
-.cadaParticipante {
-    margin: 2%;
-    font-size: 16px;
-}
-.btn-sortear {
-    background-color: #c0272d;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 700;
-    min-height: 60px;
-    width: 50%;
-    border-radius: 15px;
-    margin-left: 25%;
+@keyframes barFilling {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%;
+    }
 }
 
-.letra-historial {
-    color: rgb(250, 250, 250);
-    transform: none;
+.barraTransaction {
+    height: 35px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    animation-name: barFilling;
+    animation-duration: 2s;
 }
-.generate {
-    background-color: #c0272d;
-    border: none;
-    font-size: 17px;
-    color: #fff;
-    border-radius: 20px;
+
+.skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    
+    background: #eee;
+    height: 35px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -ms-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
 }
-.main-ctn {
-    top: 10%;
+
+.skillbar-title {
     position: absolute;
-}
-.fondoGris {
-    background-color: #f1f1f1;
-    z-index: -1;
-    border-radius: 10px;
-}
-.paddin-contenido {
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.bgSmp {
-    z-index: -1;
-}
-.mainLogoSmp {
-    max-width: 70px;
-    margin-bottom: 35px;
-    z-index: 1;
-    margin-top: -110px;
-}
-.pinButtom {
-    background-color: #c0272d;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
     color: #ffffff;
-    font-size: 24px;
-    font-weight: 700;
-    min-height: 60px;
-    width: 50%;
-    border-radius: 15px;
+    background: #6adcfa;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
-.inputs {
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    min-height: 50px;
-    border: 0px solid;
-    margin-top: -20px;
+
+.skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
-.inputCap {
-    background-color: #ffffff;
-    font-weight: bold;
-    text-transform: none;
-    font-size: 15px;
-    font-family: system-ui;
-    color: black;
-    text-transform: uppercase;
-    border-radius: 10px;
-    width: 93%;
-    padding: 8px;
-    margin-bottom: 25px;
-    border: none;
+
+.skillbar-bar {
+    height: 35px;
+    width: 0px;
+    background: #6adcfa;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
-.inputMae {
-    background-color: #ffffff;
-    font-weight: bold;
-    text-transform: none;
-    font-size: 15px;
-    font-family: system-ui;
-    color: black;
-    text-transform: uppercase;
-    border-radius: 10px;
-    width: 93%;
-    padding: 8px;
-    margin-bottom: 25px;
-    border: none;
-}
-.inputFecha {
-    background-color: #ffffff;
-    font-weight: bold;
-    text-transform: none;
-    font-size: 15px;
-    font-family: system-ui;
-    color: black;
-    text-transform: uppercase;
-    border-radius: 10px;
-    width: 93%;
-    padding: 8px;
-    margin-bottom: 25px;
-    border: none;
-}
-.pinSorteo {
-    font-size: 30px;
-    font-weight: 700;
-    color: #c0272d;
-}
-.titulo {
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: 900;
-    font-size: 25px;
-}
-.aviso {
-    text-align: justify;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 30px;
-    font-family: "Roboto";
-}
-.pin-apariencia{
+
+.skill-bar-percent {
     position: absolute;
-    font-size: 80px;
-    background-color: #C0272D;
-    border-radius: 100%;
-    color: white;
-    width: 40%;
-    left: 30%;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+    color: rgba(0, 0, 0, 0.4);
 }
-.name-apariencia{
-    color:#C0272D;
-    font-size: 30px;
-    font-style: bold;
-}
+
+// END Bars CSS
+
+// ::ng-deep .mat-tab-label-content {
+//     color: white;
+// }
+
+// ::ng-deep .mat-tab-header {
+//     border-bottom: 0px;
+// }
+// ::ng-deep .mat-tab-label-active {
+//     background-color: white;
+//     border-radius: 20px;
+//     .mat-tab-label-content {
+//         color: #c0272d !important;
+//     }
+// }
+// ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+// .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+//     background-color: #dadada;
+//     height: 0px;
+// }
+
+// ::ng-deep .mat-progress-bar {
+//     height: 10px !important;
+// }
+// .tab-style {
+//     border: 1px solid black;
+//     border-radius: 150px;
+// }
+// .fondoGris {
+//     background-color: gray;
+// }
+// .perfil {
+//     max-width: 100px;
+//     margin-left: 40%;
+//     margin-bottom: 6%;
+// }
+// .sorteo {
+//     margin-top: 25px;
+//     margin-left: 15px;
+//     color: #c0272d;
+// }
+// .usuario {
+//     background-color: #282828;
+//     color: #f1f1f1;
+//     width: 70%;
+//     height: 50px;
+//     text-align: center;
+//     border-radius: 15px;
+//     text-transform: uppercase;
+//     font-weight: 600;
+//     font-size: 20px;
+//     font-family: "Roboto";
+//     margin-left: 18%;
+//     margin-top: 25px;
+//     padding: 15px;
+// }
+// .met-tab {
+//     margin-left: 20%;
+//     background-color: #282828;
+// }
+// .cadaParticipante {
+//     margin: 2%;
+//     font-size: 16px;
+// }
+// .btn-sortear {
+//     background-color: #c0272d;
+//     color: #ffffff;
+//     font-size: 24px;
+//     font-weight: 700;
+//     min-height: 60px;
+//     width: 50%;
+//     border-radius: 15px;
+//     margin-left: 25%;
+// }
+
+// .letra-historial {
+//     color: rgb(250, 250, 250);
+//     transform: none;
+// }
+// .generate {
+//     background-color: #c0272d;
+//     border: none;
+//     font-size: 17px;
+//     color: #fff;
+// }
+// .main-ctn {
+//     top: 10%;
+//     position: absolute;
+// }
+// .fondoGris {
+//     background-color: #f1f1f1;
+//     z-index: -1;
+//     border-radius: 10px;
+// }
+// .paddin-contenido {
+//     padding-left: 25px;
+//     padding-right: 25px;
+// }
+// .bgSmp {
+//     z-index: -1;
+// }
+// .mainLogoSmp {
+//     max-width: 70px;
+//     margin-bottom: 35px;
+//     z-index: 1;
+//     margin-top: -110px;
+// }
+// .pinButtom {
+//     background-color: #c0272d;
+//     color: #ffffff;
+//     font-size: 24px;
+//     font-weight: 700;
+//     min-height: 60px;
+//     width: 50%;
+//     border-radius: 15px;
+// }
+// .inputs {
+//     padding: 15px;
+//     border-radius: 5px;
+//     font-size: 16px;
+//     min-height: 50px;
+//     border: 0px solid;
+//     margin-top: -20px;
+// }
+// .inputCap {
+//     background-color: #ffffff;
+//     font-weight: bold;
+//     text-transform: none;
+//     font-size: 15px;
+//     font-family: system-ui;
+//     color: black;
+//     text-transform: uppercase;
+//     border-radius: 10px;
+//     width: 93%;
+//     padding: 8px;
+//     margin-bottom: 25px;
+//     border: none;
+// }
+// .inputMae {
+//     background-color: #ffffff;
+//     font-weight: bold;
+//     text-transform: none;
+//     font-size: 15px;
+//     font-family: system-ui;
+//     color: black;
+//     text-transform: uppercase;
+//     border-radius: 10px;
+//     width: 93%;
+//     padding: 8px;
+//     margin-bottom: 25px;
+//     border: none;
+// }
+// .inputFecha {
+//     background-color: #ffffff;
+//     font-weight: bold;
+//     text-transform: none;
+//     font-size: 15px;
+//     font-family: system-ui;
+//     color: black;
+//     text-transform: uppercase;
+//     border-radius: 10px;
+//     width: 93%;
+//     padding: 8px;
+//     margin-bottom: 25px;
+//     border: none;
+// }
+// .pinSorteo {
+//     font-size: 30px;
+//     font-weight: 700;
+//     color: #c0272d;
+// }
+// .titulo {
+//     text-transform: uppercase;
+//     color: #000000;
+//     font-weight: 900;
+//     font-size: 25px;
+// }
+// .aviso {
+//     text-align: justify;
+//     margin-left: 20px;
+//     margin-right: 20px;
+//     margin-top: 30px;
+//     font-family: "Roboto";
+// }
+// .pin-apariencia{
+//     position: absolute;
+//     font-size: 80px;
+//     background-color: #C0272D;
+//     border-radius: 100%;
+//     color: white;
+//     width: 40%;
+//     left: 30%;
+// }
+// .name-apariencia{
+//     color:#C0272D;
+//     font-size: 30px;
+//     font-style: bold;
+// }

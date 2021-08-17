@@ -1,32 +1,33 @@
-<body background="../../assets/FondoAdmin.jpeg"></body>
-<div class="container main-cnt h-90">
-    <div class="row text-center">
-        <div class="col">
-            <div class="paddin-contenido">
-                <div class="fondoGris">
-                    <div>
-                        <img class="bgSmp" src="../../../assets/BGSMP.png" />
-                    </div>
-                    <div>
-                        <img class="mainLogoSmp" src="../../assets/LogoSMP.png" />
-                    </div>
-                    <img class="main-logo" src="../../../assets/LogoCursosBlanco.png" />
-                </div>
-            </div>
-            <form >
-                <div class="inputs">
-                    <input class="mt-2 mb-1 inpt-main inputUsuario" placeholder="Usuario" name="user" type="text"
-                        [(ngModel)]="adminUser">
-                </div>
-                <div class="inputs">
-                    <input class="mt-2 mb-1 inpt-main inputEmail" placeholder="Email"  name="email" type="email"
-                        [(ngModel)]="adminEmail">
-                </div>
+<div class="container main-ctn">
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <img class="mainLogoCursos mt-5" src="../../assets/logoCursos.png" />
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 text-center">
+            <form class="form-field-cnt">
+                <input class="mt-2 inpt-main inputCodigo" placeholder="Usuario" name="user" type="text" [(ngModel)]="adminUser">
+
+                <input class="mt-2 inpt-main inputCodigo" placeholder="Email" name="email" type="email" [(ngModel)]="adminEmail">
             </form>
-            <div class="row text-center">
-                <div class="col">
-                    <button class="btn-main mt-2 ingresarButom" mat-raised-button (click)="goToAdminMain()">
-                        Ingresar
-                    </button>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12 text-center">
+            <button class="btn-main ingresarButtom" mat-raised-button (click)="goToAdminMain()" >
+                INGRESAR
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+            <a routerLink="/" class="admin-access-ref">
+                Salir
+            </a>
+        </div>
+    </div>
+</div>
+<app-footer>
+</app-footer>
+

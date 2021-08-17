@@ -5,10 +5,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   imports: [
     MatButtonModule,
@@ -20,7 +22,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatTabsModule,
     MatSidenavModule,
     MatProgressBarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    BrowserAnimationsModule
   ],
   exports: [
     MatButtonModule,
@@ -32,7 +36,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatTabsModule,
     MatSidenavModule,
     MatProgressBarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    BrowserAnimationsModule
   ]
 })
 export class MaterialModule { }
